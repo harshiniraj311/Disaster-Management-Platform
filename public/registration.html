@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('Purple Modern Zoom Virtual Background.png');
+        }
+        .form-container {
+            width: 400px;
+            margin: 100px auto 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            border: 4px solid #000;
+            box-shadow: none;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 24px);
+            padding: 12px;
+            margin: 5px 0 10px 0;
+            font-size: 1em;
+            font-family: 'Times New Roman', Times, serif;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 12px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            background-color: #8640b4;
+            color: white;
+            display: inline-block;
+        }
+        .btn:hover {
+            background-color: #401d57;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #8640b4;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form id="signupForm" action="/signup" method="POST"> 
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="button-container">
+                <button type="submit" class="btn">Sign up</button>
+                <a href="index.html" class="back-link">Back</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); 
+        
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+        
+            try {
+                const response = await fetch('/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, email, password })
+                });
+        
+                const result = await response.json();
+        
+                if (response.ok) {
+                    localStorage.setItem('username', username);
+                    window.location.href = 'login.html'; 
+                } else {
+                    alert(result.errors[0].msg);
+                }
+            } catch (error) {
+                console.error('Error during sign up:', error);
+                alert('Signup failed. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
+

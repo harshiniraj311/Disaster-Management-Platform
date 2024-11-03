@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeTogether</title>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-image: url('Purple Modern Background.png');
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; 
+        }
+        header {
+            width: 100%;
+            background-color: #331249;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            box-sizing: border-box; 
+            position: relative;
+        }
+        .header-left {
+            display: flex;
+            flex-direction: column;
+        }
+        .username {
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+        .app-name {
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 15px; 
+            white-space: nowrap; 
+            position: absolute; 
+            right: 20px; 
+            top: 50%; 
+            transform: translateY(-50%); 
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px; 
+            transition: background-color 0.3s; 
+        }
+        .nav-links a:hover {
+            background-color: #401d57; 
+            border-radius: 5px; 
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            max-width: 800px; 
+        }
+        .box:hover {
+            transform: translateY(-10px); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+        }
+        .volunteer, .emergency-numbers, .safety-tips, .add-resource {
+            background-color: #ffffffc2; 
+        }
+        .volunteer h2, .emergency-numbers h2, .safety-tips h2, .add-resource h2 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: #381d57;
+        }
+        .volunteer p, .emergency-numbers ul, .safety-tips ul, .add-resource p {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .emergency-numbers li {
+            font-size: 1em;
+            margin: 8px 0;
+            line-height: 1.5; 
+        }
+
+        .volunteer, .add-resource {
+            margin-bottom: 50px; 
+            width: 100%; 
+            max-width: 1050px; 
+        }
+        .volunteer a, .add-resource a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #381d57;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .volunteer a:hover, .add-resource a:hover {
+            background-color: #5c2f8c;
+        }
+        .volunteer table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .volunteer table, .volunteer th, .volunteer td {
+            border: 1px solid #ddd;
+        }
+        .volunteer th, .volunteer td {
+            padding: 8px;
+            text-align: left;
+        }
+        .volunteer th {
+            background-color: #f4f4f4;
+        }
+        .volunteer td {
+            background-color: #fff;
+        }
+
+        .section-container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+        }
+        .emergency-numbers, .safety-tips {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        <div class="username">Hello, <span id="userDisplay">User</span></div>
+        <div class="app-name">SafeTogether</div>
+    </div>
+    <nav class="nav-links">
+        <a href="homepage.html">Home</a>
+        <a href="weather.html">Weather</a>
+        <a href="resources.html">Resources</a>
+        <a href="volunteer_list.html">Volunteers</a>
+        <a href="#" id="logout">Logout</a>
+    </nav>
+</header>
+
+<div class="container">
+    <!-- Add Resource Section -->
+    <section class="box add-resource">
+        <h2>Add Your Resources</h2>
+        <p>Have resources to share? Let the community know by adding your available resources.</p>
+        <a href="addResource.html">Add Resource</a>
+    </section>
+
+    <!-- Volunteer Section -->
+    <section class="box volunteer">
+        <h2>Volunteer with Us</h2>
+        <p>Want to make a difference? Sign up to volunteer and help us in our mission to keep the community safe.</p>
+        <a href="volunteer.html">Sign Up</a>
+    </section>
+
+    <div class="section-container">
+        <section class="box emergency-numbers">
+            <h2>Emergency Contacts (India)</h2>
+            <ul>
+                <li><strong>National Emergency Number:</strong> 112</li>
+                <li><strong>Police:</strong> 100 or 112</li>
+                <li><strong>Fire:</strong> 101</li>
+                <li><strong>Ambulance:</strong> 102</li>
+                <li><strong>Disaster Management Services:</strong> 108</li>
+                <li><strong>Women Helpline:</strong> 1091</li>
+                <li><strong>Disaster Management (N.D.M.A):</strong> 1078, 011-26701700</li>
+                <li><strong>Earthquake / Flood / Disaster (N.D.R.F Headquarters):</strong> 011-24363260, 9711077372</li>
+                <li><strong>Road Accident Emergency Service:</strong> 1073</li>
+                <li><strong>Railway Enquiry:</strong> 139</li>
+                <li><strong>Senior Citizen Helpline:</strong> 14567</li>
+                <li><strong>COVID-19 Helpline:</strong> 011-23978046 OR 1075</li>
+                <li><strong>Cyber Crime Helpline:</strong> 155620</li>
+            </ul>
+        </section>
+
+        <section class="box safety-tips">
+            <h2>Disaster Safety Tips</h2>
+            <h3>Earthquakes</h3>
+            <ul>
+                <li>Drop, Cover, and Hold On during shaking.</li>
+                <li>Stay indoors and away from windows.</li>
+            </ul>
+            <h3>Floods</h3>
+            <ul>
+                <li>Move to higher ground immediately.</li>
+                <li>Avoid walking or driving through floodwater.</li>
+            </ul>
+            <h3>Cyclones</h3>
+            <ul>
+                <li>Secure your home, especially windows and doors.</li>
+                <li>Evacuate if instructed by authorities.</li>
+            </ul>
+            <h3>Fires</h3>
+            <ul>
+                <li>Have an evacuation plan and practice it.</li>
+                <li>Keep flammable materials away from heat sources.</li>
+            </ul>
+            <h3>Landslides</h3>
+            <ul>
+                <li>Avoid building or living in high-risk areas.</li>
+                <li>Be cautious during heavy rainfall and move to safety.</li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+<script>
+    const username = localStorage.getItem('username');
+    if (username) {
+        document.getElementById('userDisplay').textContent = username;
+    }
+
+    document.getElementById('logout').addEventListener('click', function() {
+        localStorage.removeItem('username');
+        window.location.href = 'index.html';
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Sign-Up Form</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('Purple Modern Background.png');
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            background-color: #331249;
+            color: white;
+            padding: 10px 20px;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            white-space: nowrap;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #401d57;
+            border-radius: 5px;
+        }
+
+        .username {
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+
+        .app-name {
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px; /* Adjust to position it below the header */
+            border: 3px solid #000; /* Black border */
+        }
+
+        h2 {
+            color: #381d57;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px 0;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        input:required {
+            border: 1px solid #381d57;
+        }
+
+        .checkbox-group, .radio-group {
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            font-weight: lighter;
+        }
+
+        button {
+            background-color: #381d57;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #5c2f8c;
+        }
+
+        .alert {
+            display: none;
+            margin-bottom: 20px;
+            padding: 15px;
+            color: white;
+            background-color: #28a745;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .date-range {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .date-input-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .date-label {
+            margin-right: 10px;
+            white-space: nowrap;
+        }
+
+        .date-input {
+            font-size: 16px;
+            width: 150px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .date-range div {
+            margin-bottom: 10px;
+        }
+        label.time-of-day-heading, label.roles-heading {
+            display: block;
+            margin-bottom: 10px; /* Adjust the spacing as needed */
+            font-weight: bold; /* Optional: To make headings stand out more */
+        }
+        .checkbox-group label {
+            font-weight: normal; /* Set checkbox labels to normal weight */
+        }
+        .checkbox-group, .radio-group {
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            font-weight: lighter;
+        }
+
+        .checkbox-group div, .radio-group div {
+            margin-bottom: 10px;
+        }
+
+        .checkbox-group input, .radio-group input {
+            transform: scale(0.8);
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="username">Hello, <span id="userDisplay">User</span></div>
+            <div class="app-name">SafeTogether</div>
+        </div>
+        <nav class="nav-links">
+            <a href="homepage.html">Home</a>
+            <a href="weather.html">Weather</a>
+            <a href="resources.html">Resources</a>
+            <a href="volunteer_list.html">Volunteers</a>
+            <a href="#" id="logout">Logout</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Volunteer Sign-Up</h2>
+        <div id="alert" class="alert">Successfully signed up as a volunteer!</div>
+        <form id="volunteerForm" action="/submit_volunteer" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="Enter your city" required>
+
+            <label for="postal">Postal Code</label>
+            <input type="text" id="postal" name="postal" placeholder="Enter your postal code" required>
+
+            <label for="start_date">Availability Dates</label>
+            <div class="date-range">
+                <div class="date-input-container">
+                    <span class="date-label">From:</span>
+                    <input type="date" id="start_date" name="start_date" required class="date-input">
+                </div>
+                <div class="date-input-container">
+                    <span class="date-label">To:</span>
+                    <input type="date" id="end_date" name="end_date" required class="date-input">
+                </div>
+            </div>
+
+            <label class="time-of-day-heading">Time of Day Available</label>
+            <div class="checkbox-group">
+                <div><input type="checkbox" id="morning" name="time[]" value="Morning"> <label for="morning">Morning (8 AM - 12 PM)</label></div>
+                <div><input type="checkbox" id="afternoon" name="time[]" value="Afternoon"> <label for="afternoon">Afternoon (12 PM - 4 PM)</label></div>
+                <div><input type="checkbox" id="evening" name="time[]" value="Evening"> <label for="evening">Evening (4 PM - 8 PM)</label></div>
+                <div><input type="checkbox" id="full_day" name="time[]" value="Full Day"> <label for="full_day">Full Day (8 AM - 8 PM)</label></div>
+            </div>
+    
+            <label class="roles-heading">Preferred Volunteer Roles</label>
+            <div class="checkbox-group">
+                <div><input type="checkbox" id="first_aid" name="roles[]" value="First Aid/Medical"> <label for="first_aid">First Aid/Medical</label></div>
+                <div><input type="checkbox" id="distribution" name="roles[]" value="Resource Distribution"> <label for="distribution">Resource Distribution</label></div>
+                <div><input type="checkbox" id="management" name="roles[]" value="Shelter Management"> <label for="management">Shelter Management</label></div>
+                <div><input type="checkbox" id="clean_up" name="roles[]" value="Clean-Up Efforts"> <label for="clean_up">Clean-Up Efforts</label></div>
+                <div><input type="checkbox" id="child_care" name="roles[]" value="Child Care"> <label for="child_care">Child Care</label></div>
+                <div><input type="checkbox" id="technical" name="roles[]" value="Technical Assistance"> <label for="technical">Technical Assistance</label></div>
+                <div><input type="checkbox" id="logistics" name="roles[]" value="Logistics Support"> <label for="logistics">Logistics Support</label></div>
+                <div><input type="checkbox" id="general" name="roles[]" value="General Volunteering"> <label for="general">General Volunteering</label></div>
+                <div><input type="checkbox" id="other" name="roles[]" value="Other"> <label for="other">Other</label></div>
+            </div>
+    
+            <button type="submit">Sign Up as Volunteer</button>
+        </form>
+    </div>
+
+    <script>
+        const username = localStorage.getItem('username');
+        if (username) {
+            document.getElementById('userDisplay').textContent = username;
+        }
+
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('username');
+            window.location.href = 'index.html';
+        });
+
+        document.getElementById('volunteerForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const formObject = Object.fromEntries(formData.entries());
+            formObject['time'] = formData.getAll('time[]');
+            formObject['roles'] = formData.getAll('roles[]');
+
+            try {
+                const response = await fetch('/submit_volunteer', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formObject)
+                });
+
+                if (response.ok) {
+                    document.getElementById('alert').style.display = 'block';
+                    this.reset();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    const errorData = await response.json();
+                    alert(errorData.message || 'Failed to submit. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>

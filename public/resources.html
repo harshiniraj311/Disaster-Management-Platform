@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Marketplace</title>
+    <style>
+        * {
+            font-family: 'Arial', sans-serif; 
+            box-sizing: border-box; 
+        }
+        body {
+            background-image: url('Purple Modern Background.png');
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; 
+        }
+        header {
+            width: 100%;
+            background-color: #331249;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+        }
+        .header-left {
+            display: flex;
+            flex-direction: column;
+        }
+        .username {
+            font-size: 0.9em; 
+            margin-bottom: 5px;
+        }
+        .app-name {
+            font-size: 1.4em; 
+            font-weight: normal;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 15px; 
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em; 
+            padding: 5px 10px; 
+            transition: background-color 0.3s; 
+        }
+        .nav-links a:hover {
+            background-color: #401d57; 
+            border-radius: 5px; 
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+            padding: 20px;
+            max-width: 1200px;
+            margin: 30px; 
+            margin-top: 0px;
+        }
+        h1 {
+            text-align: center; 
+            color: #ffffff;
+            margin-top: 0px;
+        }
+        .category {
+            margin: 10px 0;
+            width: 100%;
+        }
+        .category h2 {
+            color: rgba(255, 255, 255, 0.97); 
+            margin-bottom: 10px;
+        }
+        .resources-container {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 40px; 
+        }
+        .resource {
+            background-color: #ffffffc2;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            width: calc(33% - 20px); 
+            min-width: 300px; 
+            height: auto; 
+            transition: transform 0.3s ease;
+        }
+
+        .resource:hover {
+            transform: translateY(-5px); 
+        }
+        
+        h3 {
+            margin: 0 0 10px;
+            color: #381d57;
+            font-size: 1.1em; 
+        }
+        p {
+            margin: 5px 0;
+            font-size: 0.9em; 
+        }
+        button {
+            background-color: #381d57;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em; 
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        button:hover {
+            background-color: #5c2f8c;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <div class="username">Hello, <span id="userDisplay">User</span></div>
+        <div class="app-name">SafeTogether</div>
+    </div>
+    <nav class="nav-links">
+        <a href="homepage.html">Home</a>
+        <a href="weather.html">Weather</a>
+        <a href="resources.html">Resources</a>
+        <a href="volunteer_list.html">Volunteers</a>
+        <a href="#" id="logout">Logout</a>
+    </nav>
+</header>
+
+<h1 style="align-items: center; margin-top: 30px; margin-bottom: 0px;">Available Resources</h1>
+<div class="container">
+    <div id="resourceList"></div>
+</div>
+
+<script>
+    const username = localStorage.getItem('username');
+    if (username) {
+        document.getElementById('userDisplay').textContent = username;
+    }
+
+    async function fetchResources() {
+        try {
+            const response = await fetch('/resources');
+            const resources = await response.json();
+
+            const resourceList = document.getElementById('resourceList');
+            resourceList.innerHTML = '';
+
+            // Group resources by category 
+            const groupedResources = resources.reduce((acc, resource) => {
+                const category = resource.category || 'Miscellaneous'; 
+                if (!acc[category]) {
+                    acc[category] = [];
+                }
+                acc[category].push(resource);
+                return acc;
+            }, {});
+
+            // Display resources by category
+            for (const category in groupedResources) {
+                const categoryDiv = document.createElement('div');
+                categoryDiv.classList.add('category');
+                categoryDiv.innerHTML = `<h2>${category}</h2>`;
+                
+                const resourcesContainer = document.createElement('div');
+                resourcesContainer.classList.add('resources-container');
+
+                groupedResources[category].forEach(resource => {
+                    const resourceDiv = document.createElement('div');
+                    resourceDiv.classList.add('resource');
+                    resourceDiv.innerHTML = `
+                        <h3>${resource.name}</h3>
+                        <p>${resource.description}</p>
+                        <p>Quantity: ${resource.quantity}</p>
+                        <p>Location: ${resource.location}</p>
+                        <button onclick="requestResource('${resource._id}')">Request</button>
+                    `;
+                    resourcesContainer.appendChild(resourceDiv);
+                });
+
+                categoryDiv.appendChild(resourcesContainer);
+                resourceList.appendChild(categoryDiv);
+            }
+        } catch (error) {
+            console.error('Error fetching resources:', error);
+        }
+    }
+
+    async function requestResource(resourceId) {
+        const quantity = prompt('Enter the quantity you require:');
+        if (quantity && !isNaN(quantity) && quantity > 0) {
+            try {
+                const response = await fetch(`/resources/request/${resourceId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ quantity: parseInt(quantity) }) // Send the quantity as part of the request
+                });
+
+                if (response.ok) {
+                    alert('Resource requested successfully');
+                    fetchResources();  // Refresh the list
+                } else {
+                    alert('Error requesting resource');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        } else {
+            alert('Please enter a valid quantity');
+        }
+    }
+
+    window.onload = fetchResources;
+
+    document.getElementById('logout').addEventListener('click', function() {
+        localStorage.removeItem('username');
+        window.location.href = 'index.html';
+    });
+</script>
+</body>
+</html>

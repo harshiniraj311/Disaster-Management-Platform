@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-image: url('Purple Modern Background.png');
+        font-family: Arial, sans-serif; 
+      }
+    
+      header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+    
+      h1 {
+        font-size: 2.5rem;
+        color: #ffffff; 
+        margin-bottom: 0px;
+        margin-top: 5px;
+      }
+    
+      h2 {
+        font-size: 2rem;
+        color: #ffffff; 
+      }
+    
+      nav {
+
+        padding: 1rem;
+      }
+    
+      .input-group .form-control {
+        border-color: #ffffff;
+      }
+    
+      .btn-primary {
+        background-color: #ffffffc2; 
+        border-color: #525050; 
+        color: #381d57;
+        font-weight: bold;
+      }
+    
+      .btn-primary:hover {
+        background-color: #523a82c2; 
+        border-color: #525050; 
+        
+      }
+    
+
+      .card {
+        width: 18rem;
+        margin: 1rem;
+        border-radius: 0.5rem; 
+        border: 1px solid #d1d1d1; 
+        transition: transform 0.3s ease;
+      }
+    
+      .weather-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffffc2; 
+      }
+
+      .card:hover {
+        transform: translateY(-10px); 
+      }
+    
+      .weather-card img {
+        width: 100px;
+      }
+    
+      .card-title {
+        font-size: 1.5rem; 
+        color: #381d57; 
+      }
+    
+      .card-body {
+        padding: 1rem; 
+      }
+    
+      .card-text {
+        font-size: 1rem; 
+        color: #333; 
+      }
+    
+      @media (max-width: 768px) {
+        .card {
+          width: 100%; 
+        }
+    
+        .weather-card img {
+          width: 80px; 
+        }
+      }
+      header {
+            width: 100%;
+            color: white;
+            padding: 6px 20px;
+            margin: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            box-sizing: border-box; 
+            position: relative;
+        }
+        .header-left {
+            display: flex;
+            flex-direction: column;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 15px; 
+            white-space: nowrap; 
+            position: absolute; 
+            right: 20px; 
+            top: 50%; 
+            transform: translateY(-50%); 
+        }
+        .nav-links a {
+          border-bottom: none;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px; 
+            transition: background-color 0.3s; 
+        }
+        .nav-links a:hover {
+            background-color: #401d57; 
+            border-radius: 5px; 
+        }
+        .username {
+          margin-top: 1px;
+            font-size: 1em;
+            margin-bottom: 0px;
+        }
+        .app-name {
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+    </style>
+  </head>
+  <body>
+    <header style="background-color: #331249;">
+      <div class="header-left">
+          <div class="username">Hello, <span id="userDisplay">User</span></div>
+          <div class="app-name">SafeTogether</div>
+      </div>
+      <nav class="nav-links">
+          <a href="homepage.html">Home</a>
+          <a href="weather.html">Weather</a>
+          <a href="resources.html">Resources</a>
+          <a href="volunteer_list.html">Volunteers</a>
+          <a href="#" id="logout">Logout</a>
+      </nav>
+  </header>
+    <div>
+      <header class="container">
+        <h1>Weather Forecast</h1>
+      </header>
+      <nav class="container" style="border-bottom: 2px solid #ffffff;">
+        <div class="row align-items-center py-2">
+          <div class="input-group col-sm">
+            <span class="input-group-text" id="basic-addon1">City</span>
+            <input
+              type="text"
+              class="form-control"
+              id="city"
+              placeholder="Enter city name"
+              aria-label="city"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+        </div>
+        <div class="row align-items-center py-2">
+          <div class="col-auto me-auto">
+            <button id="btnGet" type="button" class="btn btn-primary mb-3">
+              Get Weather
+            </button>
+            <button id="btnCurrent" type="button" class="btn btn-primary mb-3">
+              Use Current Location
+            </button>
+          </div>
+        </div>
+        <div class="row align-items-center py-2">
+          <div class="col-auto">
+            <input type="radio" id="currentDay" name="forecast" value="currentDay" checked>
+            <label for="currentDay" class="me-3" style="color: #ffffff;">Current Day</label>
+            <input type="radio" id="fiveDays" name="forecast" value="fiveDays">
+            <label for="fiveDays"  style="color: #ffffff;">5-Day Forecast</label>
+          </div>
+        </div>
+      </nav>
+      <main class="container">
+        <div class="weather row gx-2">
+
+        </div>
+      </main>
+    </div>
+    <script>
+        const username = localStorage.getItem('username');
+        if (username) {
+            document.getElementById('userDisplay').textContent = username;
+        }
+
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('username'); 
+            window.location.href = 'index.html'; 
+        });
+
+        const app = {
+          init: () => {
+            document.getElementById('btnGet').addEventListener('click', app.fetchWeather);
+            document.getElementById('btnCurrent').addEventListener('click', app.getLocation);
+          },
+          
+          fetchWeather: () => {
+            let city = document.getElementById('city').value;
+            let key = '70c407f88454fed337bc3088e8f54bd0';
+            let lang = 'en';
+            let units = 'metric';
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=${units}&lang=${lang}`;
+            fetch(url)
+              .then((resp) => {
+                if (!resp.ok) throw new Error(`HTTP error! Status: ${resp.status}`);
+                return resp.json();
+              })
+              .then((data) => {
+                console.log('Current Weather Data:', data); 
+                let forecastOption = document.querySelector('input[name="forecast"]:checked').value;
+                if (forecastOption === 'fiveDays') {
+                  app.fetchWeatherForecast(data.coord.lat, data.coord.lon);
+                } else {
+                  app.showWeather(data);
+                }
+              })
+              .catch((err) => console.error('Fetch Error:', err));
+          },
+        
+          getLocation: () => {
+            let opts = {
+              enableHighAccuracy: true,
+              timeout: 1000 * 10, 
+              maximumAge: 1000 * 60 * 5, 
+            };
+            navigator.geolocation.getCurrentPosition(app.ftw, app.wtf, opts);
+          },
+        
+          ftw: (position) => {
+            let lat = position.coords.latitude;
+            let lon = position.coords.longitude;
+            let key = '70c407f88454fed337bc3088e8f54bd0';
+            let lang = 'en';
+            let units = 'metric';
+            let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=${units}&lang=${lang}`;
+            fetch(url)
+              .then((resp) => {
+                if (!resp.ok) throw new Error(`HTTP error! Status: ${resp.status}`);
+                return resp.json();
+              })
+              .then((data) => {
+                console.log('Current Weather Data from Geolocation:', data); 
+                let forecastOption = document.querySelector('input[name="forecast"]:checked').value;
+                if (forecastOption === 'fiveDays') {
+                  app.fetchWeatherForecast(lat, lon);
+                } else {
+                  app.showWeather(data);
+                }
+              })
+              .catch((err) => console.error('Fetch Error:', err));
+          },
+        
+          wtf: (err) => {
+            console.error('Geolocation Error:', err);
+          },
+        
+          fetchWeatherForecast: (lat, lon) => {
+            let key = '70c407f88454fed337bc3088e8f54bd0';
+            let lang = 'en';
+            let units = 'metric';
+            let url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=${units}&lang=${lang}`;
+            fetch(url)
+              .then((resp) => {
+                if (!resp.ok) throw new Error(`HTTP error! Status: ${resp.status}`);
+                return resp.json();
+              })
+              .then((data) => {
+                console.log('5-Day Forecast Data:', data); 
+                app.showWeatherForecast(data);
+              })
+              .catch((err) => console.error('Fetch Error:', err));
+          },
+        
+          showWeather: (data) => {
+            let row = document.querySelector('.weather.row');
+            row.innerHTML = `
+              <div class="col">
+                <div class="card weather-card">
+                  <h5 class="card-title p-2">${new Date(data.dt * 1000).toDateString()}</h5>
+                  <img
+                    src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png"
+                    class="card-img-top"
+                    alt="${data.weather[0].description}"
+                  />
+                  <div class="card-body">
+                    <h3 class="card-title">${data.weather[0].main}</h3>
+                    <p class="card-text">Temperature: ${data.main.temp}&deg;C</p>
+                    <p class="card-text">Feels like: ${data.main.feels_like}&deg;C</p>
+                    <p class="card-text">Pressure: ${data.main.pressure}mb</p>
+                    <p class="card-text">Humidity: ${data.main.humidity}%</p>
+                    <p class="card-text">Wind: ${data.wind.speed} m/s, ${data.wind.deg}&deg;</p>
+                    <p class="card-text">Sunrise: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString()}</p>
+                    <p class="card-text">Sunset: ${new Date(data.sys.sunset * 1000).toLocaleTimeString()}</p>
+                  </div>
+                </div>
+              </div>`;
+          },
+        
+          showWeatherForecast: (data) => {
+            let row = document.querySelector('.weather.row');
+            row.innerHTML = '';
+            
+            // Today's weather
+            let today = data.list[0];
+            row.innerHTML += `
+              <div class="col">
+                <div class="card weather-card">
+                  <h5 class="card-title p-2">Today's Weather (${new Date(today.dt * 1000).toDateString()})</h5>
+                  <img
+                    src="http://openweathermap.org/img/wn/${today.weather[0].icon}@2x.png"
+                    class="card-img-top"
+                    alt="${today.weather[0].description}"
+                  />
+                  <div class="card-body">
+                    <h3 class="card-title">${today.weather[0].main}</h3>
+                    <p class="card-text">Temperature: ${today.main.temp}&deg;C</p>
+                    <p class="card-text">Feels like: ${today.main.feels_like}&deg;C</p>
+                    <p class="card-text">Pressure: ${today.main.pressure}mb</p>
+                    <p class="card-text">Humidity: ${today.main.humidity}%</p>
+                    <p class="card-text">Wind: ${today.wind.speed} m/s, ${today.wind.deg}&deg;</p>
+                  </div>
+                </div>
+              </div>`;
+            
+            // 5-Day Forecast
+            for (let i = 1; i <= 40; i += 8) { 
+              let day = data.list[i];
+              row.innerHTML += `
+                <div class="col">
+                  <div class="card weather-card">
+                    <h5 class="card-title p-2">${new Date(day.dt * 1000).toDateString()}</h5>
+                    <img
+                      src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png"
+                      class="card-img-top"
+                      alt="${day.weather[0].description}"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title">${day.weather[0].main}</h3>
+                      <p class="card-text">Temperature: ${day.main.temp}&deg;C</p>
+                      <p class="card-text">Feels like: ${day.main.feels_like}&deg;C</p>
+                      <p class="card-text">Pressure: ${day.main.pressure}mb</p>
+                      <p class="card-text">Humidity: ${day.main.humidity}%</p>
+                      <p class="card-text">Wind: ${day.wind.speed} m/s, ${day.wind.deg}&deg;</p>
+                    </div>
+                  </div>
+                </div>`;
+            }
+          }
+        };
+        
+        app.init();
+        </script>        
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9yL6tC4xQvsbuU8D06JrEJt4lCBHbF3v5u3rbn00e/tPbE8ZgXP" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-8w0b0jY5K2d5NzWkb7yIMn9XGn50Bd8u+4j6Sx9v5kFpbPfmjvDkDTqJ2W+d0w6YI" crossorigin="anonymous"></script>
+  </body>
+</html>

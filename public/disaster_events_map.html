@@ -1,0 +1,2811 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e3298bc078e1937664d9e09899a1f4fb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e3298bc078e1937664d9e09899a1f4fb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e3298bc078e1937664d9e09899a1f4fb = L.map(
+                "map_e3298bc078e1937664d9e09899a1f4fb",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b52e469108ec1d96bb20f4ccebb16cd9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_b52e469108ec1d96bb20f4ccebb16cd9.addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+            var marker_c9fea57559deca0ed7f534c2bb21fd52 = L.marker(
+                [44.708, 23.308],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_c195404141835e7858f5c5f0eac0decf = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/DR.png"});
+        marker_c9fea57559deca0ed7f534c2bb21fd52.setIcon(custom_icon_c195404141835e7858f5c5f0eac0decf);
+        
+    
+        var popup_78267427ed07cb2404af5441ac9b5a47 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2956832c334517c6bbd04347dc0961d5 = $(`<div id="html_2956832c334517c6bbd04347dc0961d5" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Drought in Bulgaria, Belarus, Hungary, Lithuania, Poland, Romania, Serbia, Russia, Ukraine<br><b>Location:</b> Bulgaria, Belarus, Hungary, Lithuania, Poland, Romania, Serbia, Russia, Ukraine<br><b>Alert Level:</b> Orange<br><b>Date:</b> 21 May 2023 - 03 Nov 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1016401&episodeid=47&eventtype=DR' target='_blank'>View Report</a></div>`)[0];
+                popup_78267427ed07cb2404af5441ac9b5a47.setContent(html_2956832c334517c6bbd04347dc0961d5);
+            
+        
+
+        marker_c9fea57559deca0ed7f534c2bb21fd52.bindPopup(popup_78267427ed07cb2404af5441ac9b5a47)
+        ;
+
+        
+    
+    
+            marker_c9fea57559deca0ed7f534c2bb21fd52.bindTooltip(
+                `<div>
+                     Drought in Bulgaria, Belarus, Hungary, Lithuania, Poland, Romania, Serbia, Russia, Ukraine
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_409c7b8f7bf6dd03b3bc250211fe3a0d = L.marker(
+                [-4.042, -48.61],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_b9fb4bbccbfa3ee795ee170c0c9e07f5 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/DR.png"});
+        marker_409c7b8f7bf6dd03b3bc250211fe3a0d.setIcon(custom_icon_b9fb4bbccbfa3ee795ee170c0c9e07f5);
+        
+    
+        var popup_1e6e4c73df04e0dcef69b10ea084a8a8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_edd2630bd1dfbd3e846cc151edf4b1e9 = $(`<div id="html_edd2630bd1dfbd3e846cc151edf4b1e9" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Drought in Bolivia, Brazil, Colombia, Ecuador, Peru, Venezuela<br><b>Location:</b> Bolivia, Brazil, Colombia, Ecuador, Peru, Venezuela<br><b>Alert Level:</b> Orange<br><b>Date:</b> 21 Sep 2022 - 03 Nov 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1016449&episodeid=42&eventtype=DR' target='_blank'>View Report</a></div>`)[0];
+                popup_1e6e4c73df04e0dcef69b10ea084a8a8.setContent(html_edd2630bd1dfbd3e846cc151edf4b1e9);
+            
+        
+
+        marker_409c7b8f7bf6dd03b3bc250211fe3a0d.bindPopup(popup_1e6e4c73df04e0dcef69b10ea084a8a8)
+        ;
+
+        
+    
+    
+            marker_409c7b8f7bf6dd03b3bc250211fe3a0d.bindTooltip(
+                `<div>
+                     Drought in Bolivia, Brazil, Colombia, Ecuador, Peru, Venezuela
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0ab3048e3110196ad34bf52f1be1db7f = L.marker(
+                [36.329, 2.526],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_ad498b9e08ae9788c2184eaed2e761f6 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/DR.png"});
+        marker_0ab3048e3110196ad34bf52f1be1db7f.setIcon(custom_icon_ad498b9e08ae9788c2184eaed2e761f6);
+        
+    
+        var popup_731e5596dfefe1cd6e86b28f248b5176 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_36610acfe2ba424b7b96cc584e252203 = $(`<div id="html_36610acfe2ba424b7b96cc584e252203" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Drought in Algeria, Spain, Morocco, Tunisia<br><b>Location:</b> Algeria, Spain, Morocco, Tunisia<br><b>Alert Level:</b> Orange<br><b>Date:</b> 21 Sep 2023 - 03 Nov 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1016686&episodeid=36&eventtype=DR' target='_blank'>View Report</a></div>`)[0];
+                popup_731e5596dfefe1cd6e86b28f248b5176.setContent(html_36610acfe2ba424b7b96cc584e252203);
+            
+        
+
+        marker_0ab3048e3110196ad34bf52f1be1db7f.bindPopup(popup_731e5596dfefe1cd6e86b28f248b5176)
+        ;
+
+        
+    
+    
+            marker_0ab3048e3110196ad34bf52f1be1db7f.bindTooltip(
+                `<div>
+                     Drought in Algeria, Spain, Morocco, Tunisia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_247ec0ed29a790d9c046fc92625a0822 = L.marker(
+                [-18.902, 47.012],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_d1957bfe7ba82b94ecd4a3585085b316 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/DR.png"});
+        marker_247ec0ed29a790d9c046fc92625a0822.setIcon(custom_icon_d1957bfe7ba82b94ecd4a3585085b316);
+        
+    
+        var popup_a26e06959e8d57c67710def77c9034e8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_58e8fda9f966272a5e9b8c91356d878c = $(`<div id="html_58e8fda9f966272a5e9b8c91356d878c" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Drought in Madagascar<br><b>Location:</b> Madagascar<br><b>Alert Level:</b> Orange<br><b>Date:</b> 21 Oct 2023 - 03 Nov 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1016833&episodeid=30&eventtype=DR' target='_blank'>View Report</a></div>`)[0];
+                popup_a26e06959e8d57c67710def77c9034e8.setContent(html_58e8fda9f966272a5e9b8c91356d878c);
+            
+        
+
+        marker_247ec0ed29a790d9c046fc92625a0822.bindPopup(popup_a26e06959e8d57c67710def77c9034e8)
+        ;
+
+        
+    
+    
+            marker_247ec0ed29a790d9c046fc92625a0822.bindTooltip(
+                `<div>
+                     Drought in Madagascar
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2c8653682e4c264c935f0ad86490b188 = L.marker(
+                [17.5, -97.5],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_665d34e92c557412b287fdab558dfbf5 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/DR.png"});
+        marker_2c8653682e4c264c935f0ad86490b188.setIcon(custom_icon_665d34e92c557412b287fdab558dfbf5);
+        
+    
+        var popup_899f4d67652f1e1e785219f405984c4b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4cf3874b11cbe37612c95ad4cd79108b = $(`<div id="html_4cf3874b11cbe37612c95ad4cd79108b" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Drought in Mexico, United States<br><b>Location:</b> Mexico, United States<br><b>Alert Level:</b> Orange<br><b>Date:</b> 21 Feb 2024 - 03 Nov 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1016963&episodeid=19&eventtype=DR' target='_blank'>View Report</a></div>`)[0];
+                popup_899f4d67652f1e1e785219f405984c4b.setContent(html_4cf3874b11cbe37612c95ad4cd79108b);
+            
+        
+
+        marker_2c8653682e4c264c935f0ad86490b188.bindPopup(popup_899f4d67652f1e1e785219f405984c4b)
+        ;
+
+        
+    
+    
+            marker_2c8653682e4c264c935f0ad86490b188.bindTooltip(
+                `<div>
+                     Drought in Mexico, United States
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_07881bfdef50cf3b043843bf59a83340 = L.marker(
+                [50.108, 38.941],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_e438ca9c1150aa296c483ae26fc90be0 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/DR.png"});
+        marker_07881bfdef50cf3b043843bf59a83340.setIcon(custom_icon_e438ca9c1150aa296c483ae26fc90be0);
+        
+    
+        var popup_830f0c2f0e1134066c4705d3ae191d37 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9421cd1eb8db46beecf7a19ca4f200ef = $(`<div id="html_9421cd1eb8db46beecf7a19ca4f200ef" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Drought in Belarus, Georgia, Kazakhstan, Russia, Ukraine<br><b>Location:</b> Belarus, Georgia, Kazakhstan, Russia, Ukraine<br><b>Alert Level:</b> Orange<br><b>Date:</b> 21 Mar 2024 - 03 Nov 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1017051&episodeid=15&eventtype=DR' target='_blank'>View Report</a></div>`)[0];
+                popup_830f0c2f0e1134066c4705d3ae191d37.setContent(html_9421cd1eb8db46beecf7a19ca4f200ef);
+            
+        
+
+        marker_07881bfdef50cf3b043843bf59a83340.bindPopup(popup_830f0c2f0e1134066c4705d3ae191d37)
+        ;
+
+        
+    
+    
+            marker_07881bfdef50cf3b043843bf59a83340.bindTooltip(
+                `<div>
+                     Drought in Belarus, Georgia, Kazakhstan, Russia, Ukraine
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1de7f79a6508270da787ecf17f5ef3c3 = L.marker(
+                [32.2, 126.1],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_ebebea5aef4ff1f72919b4d76497a9be = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_1de7f79a6508270da787ecf17f5ef3c3.setIcon(custom_icon_ebebea5aef4ff1f72919b4d76497a9be);
+        
+    
+        var popup_e5f6047c26531cabde78c384a1c9d687 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3c9d16e0b275770ee1b0168d61b6bb74 = $(`<div id="html_3c9d16e0b275770ee1b0168d61b6bb74" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone KONG-REY-24<br><b>Location:</b> Philippines, Taiwan, China, Japan<br><b>Alert Level:</b> Red<br><b>Date:</b> 25 Oct 2024 - 01 Nov 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001118&episodeid=32&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_e5f6047c26531cabde78c384a1c9d687.setContent(html_3c9d16e0b275770ee1b0168d61b6bb74);
+            
+        
+
+        marker_1de7f79a6508270da787ecf17f5ef3c3.bindPopup(popup_e5f6047c26531cabde78c384a1c9d687)
+        ;
+
+        
+    
+    
+            marker_1de7f79a6508270da787ecf17f5ef3c3.bindTooltip(
+                `<div>
+                     Tropical Cyclone KONG-REY-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1d174c52a2cb550712974a95b2faf684 = L.marker(
+                [39.6819591, -0.7654406],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_a7cb92fc54470f1ee212ff5a82fd9d6a = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Red/FL.png"});
+        marker_1d174c52a2cb550712974a95b2faf684.setIcon(custom_icon_a7cb92fc54470f1ee212ff5a82fd9d6a);
+        
+    
+        var popup_55216d8792f3bc6efb6ddc91d18062ef = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2d30a4e7a79c04d141078534aa72bf04 = $(`<div id="html_2d30a4e7a79c04d141078534aa72bf04" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Spain<br><b>Location:</b> Spain<br><b>Alert Level:</b> Red<br><b>Date:</b> 27 Oct 2024 - 30 Oct 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102983&episodeid=1&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_55216d8792f3bc6efb6ddc91d18062ef.setContent(html_2d30a4e7a79c04d141078534aa72bf04);
+            
+        
+
+        marker_1d174c52a2cb550712974a95b2faf684.bindPopup(popup_55216d8792f3bc6efb6ddc91d18062ef)
+        ;
+
+        
+    
+    
+            marker_1d174c52a2cb550712974a95b2faf684.bindTooltip(
+                `<div>
+                     Flood in Spain
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2f36bf7e7bdc9230518f9b9302fd99e1 = L.marker(
+                [16.4, 108.7],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_b3ba7c904aa5751948ac81cd1f4b87b7 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_2f36bf7e7bdc9230518f9b9302fd99e1.setIcon(custom_icon_b3ba7c904aa5751948ac81cd1f4b87b7);
+        
+    
+        var popup_417d0519ef5ee04efc82d6a6d973849d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4911800866784b9c94482f4ef515a058 = $(`<div id="html_4911800866784b9c94482f4ef515a058" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone TRAMI-24<br><b>Location:</b> Viet Nam, China, Philippines, Cambodia, Laos, Taiwan<br><b>Alert Level:</b> Orange<br><b>Date:</b> 20 Oct 2024 - 28 Oct 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001115&episodeid=34&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_417d0519ef5ee04efc82d6a6d973849d.setContent(html_4911800866784b9c94482f4ef515a058);
+            
+        
+
+        marker_2f36bf7e7bdc9230518f9b9302fd99e1.bindPopup(popup_417d0519ef5ee04efc82d6a6d973849d)
+        ;
+
+        
+    
+    
+            marker_2f36bf7e7bdc9230518f9b9302fd99e1.bindTooltip(
+                `<div>
+                     Tropical Cyclone TRAMI-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8e89a53f1479219448efabf34280bb9e = L.marker(
+                [20.5431241, 84.6897321],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_6bd14bbb685a27cd3add4ca7a204ded2 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Red/FL.png"});
+        marker_8e89a53f1479219448efabf34280bb9e.setIcon(custom_icon_6bd14bbb685a27cd3add4ca7a204ded2);
+        
+    
+        var popup_870c18b3666020347cf84fdb3823a61d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3642aabf5f46e6460746bae98ffb3f25 = $(`<div id="html_3642aabf5f46e6460746bae98ffb3f25" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in India<br><b>Location:</b> India<br><b>Alert Level:</b> Red<br><b>Date:</b> 20 Oct 2024 - 26 Oct 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102974&episodeid=2&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_870c18b3666020347cf84fdb3823a61d.setContent(html_3642aabf5f46e6460746bae98ffb3f25);
+            
+        
+
+        marker_8e89a53f1479219448efabf34280bb9e.bindPopup(popup_870c18b3666020347cf84fdb3823a61d)
+        ;
+
+        
+    
+    
+            marker_8e89a53f1479219448efabf34280bb9e.bindTooltip(
+                `<div>
+                     Flood in India
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5351d911931e70f143aed76fc5a4f5e7 = L.marker(
+                [20.8, 86.9],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_073512edeb4341938c8e1a55a1312401 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/TC.png"});
+        marker_5351d911931e70f143aed76fc5a4f5e7.setIcon(custom_icon_073512edeb4341938c8e1a55a1312401);
+        
+    
+        var popup_a2d08fd06ca92174268aa941867f00c9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_57da1bd48be982882e216be1f7a55d98 = $(`<div id="html_57da1bd48be982882e216be1f7a55d98" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone DANA-24<br><b>Location:</b> India<br><b>Alert Level:</b> Red<br><b>Date:</b> 23 Oct 2024 - 25 Oct 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001117&episodeid=8&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_a2d08fd06ca92174268aa941867f00c9.setContent(html_57da1bd48be982882e216be1f7a55d98);
+            
+        
+
+        marker_5351d911931e70f143aed76fc5a4f5e7.bindPopup(popup_a2d08fd06ca92174268aa941867f00c9)
+        ;
+
+        
+    
+    
+            marker_5351d911931e70f143aed76fc5a4f5e7.bindTooltip(
+                `<div>
+                     Tropical Cyclone DANA-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_352f9e21efd0f35ead01b62c478c3602 = L.marker(
+                [23.0, -74.0],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_662b23f8cced062fcaa5e8e381da52fc = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_352f9e21efd0f35ead01b62c478c3602.setIcon(custom_icon_662b23f8cced062fcaa5e8e381da52fc);
+        
+    
+        var popup_36d22884dfcccc1eb4bf624fec47c0a5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_342d0815c6c73152cf3d90ee32a7999d = $(`<div id="html_342d0815c6c73152cf3d90ee32a7999d" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone OSCAR-24<br><b>Location:</b> Turks and Caicos Islands, Bahamas, Cuba, United States<br><b>Alert Level:</b> Orange<br><b>Date:</b> 19 Oct 2024 - 22 Oct 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001114&episodeid=15&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_36d22884dfcccc1eb4bf624fec47c0a5.setContent(html_342d0815c6c73152cf3d90ee32a7999d);
+            
+        
+
+        marker_352f9e21efd0f35ead01b62c478c3602.bindPopup(popup_36d22884dfcccc1eb4bf624fec47c0a5)
+        ;
+
+        
+    
+    
+            marker_352f9e21efd0f35ead01b62c478c3602.bindTooltip(
+                `<div>
+                     Tropical Cyclone OSCAR-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ac4b0dbacdef02ceacb0f95bb8c31224 = L.marker(
+                [16.5, -93.0],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_85a757db0919089cc857862e11ff5183 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_ac4b0dbacdef02ceacb0f95bb8c31224.setIcon(custom_icon_85a757db0919089cc857862e11ff5183);
+        
+    
+        var popup_bf61ff07c8463c905929f64fcfd998b7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_60c300b71217c8e19c516b79ddb47ab9 = $(`<div id="html_60c300b71217c8e19c516b79ddb47ab9" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone NADINE-24<br><b>Location:</b> Guatemala, Mexico, Belize, Honduras, Nicaragua<br><b>Alert Level:</b> Orange<br><b>Date:</b> 18 Oct 2024 - 20 Oct 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001113&episodeid=8&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_bf61ff07c8463c905929f64fcfd998b7.setContent(html_60c300b71217c8e19c516b79ddb47ab9);
+            
+        
+
+        marker_ac4b0dbacdef02ceacb0f95bb8c31224.bindPopup(popup_bf61ff07c8463c905929f64fcfd998b7)
+        ;
+
+        
+    
+    
+            marker_ac4b0dbacdef02ceacb0f95bb8c31224.bindTooltip(
+                `<div>
+                     Tropical Cyclone NADINE-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a1f6e4313f6f203629cbb6ead56672bb = L.marker(
+                [13.5820827, 14.3788329],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_97c1eeed49b7c35f74c2ee5e11754709 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png"});
+        marker_a1f6e4313f6f203629cbb6ead56672bb.setIcon(custom_icon_97c1eeed49b7c35f74c2ee5e11754709);
+        
+    
+        var popup_aaf9067418f985e09a8ae1719135e270 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_409ad51d247db4efa00f904ab58a4e90 = $(`<div id="html_409ad51d247db4efa00f904ab58a4e90" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Chad<br><b>Location:</b> Chad<br><b>Alert Level:</b> Orange<br><b>Date:</b> 01 Sep 2024 - 17 Oct 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102960&episodeid=1&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_aaf9067418f985e09a8ae1719135e270.setContent(html_409ad51d247db4efa00f904ab58a4e90);
+            
+        
+
+        marker_a1f6e4313f6f203629cbb6ead56672bb.bindPopup(popup_aaf9067418f985e09a8ae1719135e270)
+        ;
+
+        
+    
+    
+            marker_a1f6e4313f6f203629cbb6ead56672bb.bindTooltip(
+                `<div>
+                     Flood in Chad
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_da1e7afce4727d75c7bcb8f15af4c17f = L.marker(
+                [38.3086, 38.8261],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_e49a4c5ebff41dd64f01f92cd40cc9dc = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/EQ.png"});
+        marker_da1e7afce4727d75c7bcb8f15af4c17f.setIcon(custom_icon_e49a4c5ebff41dd64f01f92cd40cc9dc);
+        
+    
+        var popup_35a571c4234b1b34ad3d8f56c46b0ed1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e1b01ca2a27e969556314e605db3839f = $(`<div id="html_e1b01ca2a27e969556314e605db3839f" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in Türkiye<br><b>Location:</b> Türkiye<br><b>Alert Level:</b> Orange<br><b>Date:</b> 16 Oct 2024 07:46:32<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1449585&episodeid=1598401&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_35a571c4234b1b34ad3d8f56c46b0ed1.setContent(html_e1b01ca2a27e969556314e605db3839f);
+            
+        
+
+        marker_da1e7afce4727d75c7bcb8f15af4c17f.bindPopup(popup_35a571c4234b1b34ad3d8f56c46b0ed1)
+        ;
+
+        
+    
+    
+            marker_da1e7afce4727d75c7bcb8f15af4c17f.bindTooltip(
+                `<div>
+                     Earthquake in Türkiye
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_263bc1b8ccd05857beae322304702aed = L.marker(
+                [29.5, -76.3],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_5e487631c8e423812cc68544d103c6ff = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_263bc1b8ccd05857beae322304702aed.setIcon(custom_icon_5e487631c8e423812cc68544d103c6ff);
+        
+    
+        var popup_8265a046403e43a85f4fccb6bab16fc3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cbad0a1e227a7d9e66249a22a31a9ec7 = $(`<div id="html_cbad0a1e227a7d9e66249a22a31a9ec7" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone MILTON-24<br><b>Location:</b> Mexico, United States<br><b>Alert Level:</b> Orange<br><b>Date:</b> 05 Oct 2024 - 10 Oct 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001111&episodeid=23&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_8265a046403e43a85f4fccb6bab16fc3.setContent(html_cbad0a1e227a7d9e66249a22a31a9ec7);
+            
+        
+
+        marker_263bc1b8ccd05857beae322304702aed.bindPopup(popup_8265a046403e43a85f4fccb6bab16fc3)
+        ;
+
+        
+    
+    
+            marker_263bc1b8ccd05857beae322304702aed.bindTooltip(
+                `<div>
+                     Tropical Cyclone MILTON-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_50434481ae6380a4e5d81c1e5210c1eb = L.marker(
+                [45.11796715, 17.0022251875],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_b3127965c10d303ee8c6c3ba30f4f9e2 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png"});
+        marker_50434481ae6380a4e5d81c1e5210c1eb.setIcon(custom_icon_b3127965c10d303ee8c6c3ba30f4f9e2);
+        
+    
+        var popup_6abf89c355ea3559cb9ffa9784fa186a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_671b574566231522f1959a0d1664eed8 = $(`<div id="html_671b574566231522f1959a0d1664eed8" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Bosnia  and  Herzegovina<br><b>Location:</b> Bosnia & Herzegovina<br><b>Alert Level:</b> Orange<br><b>Date:</b> 03 Oct 2024 - 05 Oct 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102933&episodeid=1&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_6abf89c355ea3559cb9ffa9784fa186a.setContent(html_671b574566231522f1959a0d1664eed8);
+            
+        
+
+        marker_50434481ae6380a4e5d81c1e5210c1eb.bindPopup(popup_6abf89c355ea3559cb9ffa9784fa186a)
+        ;
+
+        
+    
+    
+            marker_50434481ae6380a4e5d81c1e5210c1eb.bindTooltip(
+                `<div>
+                     Flood in Bosnia  and  Herzegovina
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_38cb46597547653d7a0a159e6ed9bccc = L.marker(
+                [23.0, 120.9],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_b84a196428d187c4e6afe96969681e60 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_38cb46597547653d7a0a159e6ed9bccc.setIcon(custom_icon_b84a196428d187c4e6afe96969681e60);
+        
+    
+        var popup_2def3122b4f052d2e09155856993dc43 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b4c58b11b68b6cb595a794d905425ce2 = $(`<div id="html_b4c58b11b68b6cb595a794d905425ce2" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone KRATHON-24<br><b>Location:</b> China, Philippines, Taiwan<br><b>Alert Level:</b> Orange<br><b>Date:</b> 27 Sep 2024 - 03 Oct 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001105&episodeid=27&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_2def3122b4f052d2e09155856993dc43.setContent(html_b4c58b11b68b6cb595a794d905425ce2);
+            
+        
+
+        marker_38cb46597547653d7a0a159e6ed9bccc.bindPopup(popup_2def3122b4f052d2e09155856993dc43)
+        ;
+
+        
+    
+    
+            marker_38cb46597547653d7a0a159e6ed9bccc.bindTooltip(
+                `<div>
+                     Tropical Cyclone KRATHON-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2269e0068437b8307ff5dbc291d8d228 = L.marker(
+                [38.08165984908528, 22.473213414551545],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_d6924f1405f8766b5fef83d5a4bb6f5a = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/WF.png"});
+        marker_2269e0068437b8307ff5dbc291d8d228.setIcon(custom_icon_d6924f1405f8766b5fef83d5a4bb6f5a);
+        
+    
+        var popup_b925cd1ea0902b48e1cf0a5a35902d65 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f416aae689370a23e747a8d608595814 = $(`<div id="html_f416aae689370a23e747a8d608595814" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Forest fires in Greece<br><b>Location:</b> Greece<br><b>Alert Level:</b> Orange<br><b>Date:</b> 29 Sep 2024 - 02 Oct 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1022468&episodeid=8&eventtype=WF' target='_blank'>View Report</a></div>`)[0];
+                popup_b925cd1ea0902b48e1cf0a5a35902d65.setContent(html_f416aae689370a23e747a8d608595814);
+            
+        
+
+        marker_2269e0068437b8307ff5dbc291d8d228.bindPopup(popup_b925cd1ea0902b48e1cf0a5a35902d65)
+        ;
+
+        
+    
+    
+            marker_2269e0068437b8307ff5dbc291d8d228.bindTooltip(
+                `<div>
+                     Forest fires in Greece
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_02759e3b1732472c4c3e858c02e6f94d = L.marker(
+                [28.3780464, 83.9999901],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_9d5b1ba6a40497e995b25fdb3bfc5ac9 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png"});
+        marker_02759e3b1732472c4c3e858c02e6f94d.setIcon(custom_icon_9d5b1ba6a40497e995b25fdb3bfc5ac9);
+        
+    
+        var popup_a6caf37dbad695feb225d61ecaa648d7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2411d52f3f4b5ad942a416825733ff88 = $(`<div id="html_2411d52f3f4b5ad942a416825733ff88" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Nepal<br><b>Location:</b> Nepal<br><b>Alert Level:</b> Orange<br><b>Date:</b> 26 Sep 2024 - 28 Sep 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102923&episodeid=1&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_a6caf37dbad695feb225d61ecaa648d7.setContent(html_2411d52f3f4b5ad942a416825733ff88);
+            
+        
+
+        marker_02759e3b1732472c4c3e858c02e6f94d.bindPopup(popup_a6caf37dbad695feb225d61ecaa648d7)
+        ;
+
+        
+    
+    
+            marker_02759e3b1732472c4c3e858c02e6f94d.bindTooltip(
+                `<div>
+                     Flood in Nepal
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b6c437b8f948c76c86a32a30cf4b0500 = L.marker(
+                [18.5, -103.5],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_88eceb45cc70dcb75208e3d924eac595 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_b6c437b8f948c76c86a32a30cf4b0500.setIcon(custom_icon_88eceb45cc70dcb75208e3d924eac595);
+        
+    
+        var popup_8ba810eb194accecc409c175a2c8e0c0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_10616a0d9717b2575195cee39623c8f7 = $(`<div id="html_10616a0d9717b2575195cee39623c8f7" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone JOHN-24<br><b>Location:</b> Mexico<br><b>Alert Level:</b> Orange<br><b>Date:</b> 22 Sep 2024 - 27 Sep 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001100&episodeid=20&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_8ba810eb194accecc409c175a2c8e0c0.setContent(html_10616a0d9717b2575195cee39623c8f7);
+            
+        
+
+        marker_b6c437b8f948c76c86a32a30cf4b0500.bindPopup(popup_8ba810eb194accecc409c175a2c8e0c0)
+        ;
+
+        
+    
+    
+            marker_b6c437b8f948c76c86a32a30cf4b0500.bindTooltip(
+                `<div>
+                     Tropical Cyclone JOHN-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_031944d7fd688bd0c106cd0b6964db51 = L.marker(
+                [37.5, -85.5],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_103cb125ea44bea3a4da48b2d119276d = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_031944d7fd688bd0c106cd0b6964db51.setIcon(custom_icon_103cb125ea44bea3a4da48b2d119276d);
+        
+    
+        var popup_b2126d9328c4a4775305cfe179da316b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b90916e8e7dbf41516b0a0f343ead829 = $(`<div id="html_b90916e8e7dbf41516b0a0f343ead829" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone HELENE-24<br><b>Location:</b> United States, Mexico, Belize<br><b>Alert Level:</b> Red<br><b>Date:</b> 23 Sep 2024 - 27 Sep 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001101&episodeid=18&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_b2126d9328c4a4775305cfe179da316b.setContent(html_b90916e8e7dbf41516b0a0f343ead829);
+            
+        
+
+        marker_031944d7fd688bd0c106cd0b6964db51.bindPopup(popup_b2126d9328c4a4775305cfe179da316b)
+        ;
+
+        
+    
+    
+            marker_031944d7fd688bd0c106cd0b6964db51.bindTooltip(
+                `<div>
+                     Tropical Cyclone HELENE-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7f3c6f6a21d0c09a098e8372275ae94a = L.marker(
+                [40.69778903674645, -8.41307476848401],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_e586ffa2b60955ccee01cd87ac38d6aa = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/WF.png"});
+        marker_7f3c6f6a21d0c09a098e8372275ae94a.setIcon(custom_icon_e586ffa2b60955ccee01cd87ac38d6aa);
+        
+    
+        var popup_07d291fb89dc503ff6a9484ba534d399 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b5c0067821000e674bc2f376abe6b58c = $(`<div id="html_b5c0067821000e674bc2f376abe6b58c" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Forest fires in Portugal<br><b>Location:</b> Portugal<br><b>Alert Level:</b> Orange<br><b>Date:</b> 15 Sep 2024 - 19 Sep 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1022227&episodeid=13&eventtype=WF' target='_blank'>View Report</a></div>`)[0];
+                popup_07d291fb89dc503ff6a9484ba534d399.setContent(html_b5c0067821000e674bc2f376abe6b58c);
+            
+        
+
+        marker_7f3c6f6a21d0c09a098e8372275ae94a.bindPopup(popup_07d291fb89dc503ff6a9484ba534d399)
+        ;
+
+        
+    
+    
+            marker_7f3c6f6a21d0c09a098e8372275ae94a.bindTooltip(
+                `<div>
+                     Forest fires in Portugal
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eb12c5503aeff45846aa144d5fc1dcad = L.marker(
+                [40.88126631500879, -8.015030336247323],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_32e1ecb3d605bc9ca97f8fb6f9c238f0 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/WF.png"});
+        marker_eb12c5503aeff45846aa144d5fc1dcad.setIcon(custom_icon_32e1ecb3d605bc9ca97f8fb6f9c238f0);
+        
+    
+        var popup_38a846ab4fb61c8b177a593310278f6b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4da204c576b660f0d36ebf723f886b9b = $(`<div id="html_4da204c576b660f0d36ebf723f886b9b" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Forest fires in Portugal<br><b>Location:</b> Portugal<br><b>Alert Level:</b> Orange<br><b>Date:</b> 14 Sep 2024 - 19 Sep 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1022252&episodeid=9&eventtype=WF' target='_blank'>View Report</a></div>`)[0];
+                popup_38a846ab4fb61c8b177a593310278f6b.setContent(html_4da204c576b660f0d36ebf723f886b9b);
+            
+        
+
+        marker_eb12c5503aeff45846aa144d5fc1dcad.bindPopup(popup_38a846ab4fb61c8b177a593310278f6b)
+        ;
+
+        
+    
+    
+            marker_eb12c5503aeff45846aa144d5fc1dcad.bindTooltip(
+                `<div>
+                     Forest fires in Portugal
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7bfe1d657462162bd6beda260c1f01d5 = L.marker(
+                [49.8591058, 16.9561267467493],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_9c70dea81a895dd935199d41079d3469 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png"});
+        marker_7bfe1d657462162bd6beda260c1f01d5.setIcon(custom_icon_9c70dea81a895dd935199d41079d3469);
+        
+    
+        var popup_1d2c4be1aa0db002ffa61eba0487bee4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d54d8857e04461f6b5dc7a6d1cfd765e = $(`<div id="html_d54d8857e04461f6b5dc7a6d1cfd765e" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Austria, Czech Republic, Germany, Poland, Romania, Slovakia<br><b>Location:</b> Austria, Czech Republic, Germany, Poland, Romania, Slovakia<br><b>Alert Level:</b> Orange<br><b>Date:</b> 12 Sep 2024 - 18 Sep 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102899&episodeid=3&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_1d2c4be1aa0db002ffa61eba0487bee4.setContent(html_d54d8857e04461f6b5dc7a6d1cfd765e);
+            
+        
+
+        marker_7bfe1d657462162bd6beda260c1f01d5.bindPopup(popup_1d2c4be1aa0db002ffa61eba0487bee4)
+        ;
+
+        
+    
+    
+            marker_7bfe1d657462162bd6beda260c1f01d5.bindTooltip(
+                `<div>
+                     Flood in Austria, Czech Republic, Germany, Poland, Romania, Slovakia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2ec0e428028acc05a523791acf913846 = L.marker(
+                [27.1303344, 80.859666],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_30deac67a4290b88ebf210555cd5ff9d = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png"});
+        marker_2ec0e428028acc05a523791acf913846.setIcon(custom_icon_30deac67a4290b88ebf210555cd5ff9d);
+        
+    
+        var popup_e95549bbe2eee79b17e21e78efd1a1ca = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_32812cbbefe9b3265a0280f2e8bbce43 = $(`<div id="html_32812cbbefe9b3265a0280f2e8bbce43" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in India<br><b>Location:</b> India<br><b>Alert Level:</b> Orange<br><b>Date:</b> 10 Jun 2024 - 16 Sep 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102678&episodeid=30&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_e95549bbe2eee79b17e21e78efd1a1ca.setContent(html_32812cbbefe9b3265a0280f2e8bbce43);
+            
+        
+
+        marker_2ec0e428028acc05a523791acf913846.bindPopup(popup_e95549bbe2eee79b17e21e78efd1a1ca)
+        ;
+
+        
+    
+    
+            marker_2ec0e428028acc05a523791acf913846.bindTooltip(
+                `<div>
+                     Flood in India
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d669b0c1ef8df9656be34547ff4596ea = L.marker(
+                [30.9, 121.6],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_289e75e0ed095dc04aadd64f9914d4e9 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/TC.png"});
+        marker_d669b0c1ef8df9656be34547ff4596ea.setIcon(custom_icon_289e75e0ed095dc04aadd64f9914d4e9);
+        
+    
+        var popup_00a9edcc6a88b85134a184b0b2952eea = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ef5beaa3a2d6809c972bd7470f59e9ba = $(`<div id="html_ef5beaa3a2d6809c972bd7470f59e9ba" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone BEBINCA-24<br><b>Location:</b> China, Japan, Guam, Northern Mariana Islands<br><b>Alert Level:</b> Orange<br><b>Date:</b> 10 Sep 2024 - 16 Sep 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001093&episodeid=25&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_00a9edcc6a88b85134a184b0b2952eea.setContent(html_ef5beaa3a2d6809c972bd7470f59e9ba);
+            
+        
+
+        marker_d669b0c1ef8df9656be34547ff4596ea.bindPopup(popup_00a9edcc6a88b85134a184b0b2952eea)
+        ;
+
+        
+    
+    
+            marker_d669b0c1ef8df9656be34547ff4596ea.bindTooltip(
+                `<div>
+                     Tropical Cyclone BEBINCA-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_479f5e7d5ba3003f2cdfa781b7db2ebf = L.marker(
+                [21.0, 106.9],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_ed70e674a1f94676b2ebaf79f86bc7d6 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Red/TC.png"});
+        marker_479f5e7d5ba3003f2cdfa781b7db2ebf.setIcon(custom_icon_ed70e674a1f94676b2ebaf79f86bc7d6);
+        
+    
+        var popup_b19475121ad5a61e80f0f9e50648d59f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_477fffef9ff5d325341cf142fd9a507e = $(`<div id="html_477fffef9ff5d325341cf142fd9a507e" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone YAGI-24<br><b>Location:</b> China, Viet Nam, Philippines<br><b>Alert Level:</b> Red<br><b>Date:</b> 01 Sep 2024 - 07 Sep 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001090&episodeid=24&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_b19475121ad5a61e80f0f9e50648d59f.setContent(html_477fffef9ff5d325341cf142fd9a507e);
+            
+        
+
+        marker_479f5e7d5ba3003f2cdfa781b7db2ebf.bindPopup(popup_b19475121ad5a61e80f0f9e50648d59f)
+        ;
+
+        
+    
+    
+            marker_479f5e7d5ba3003f2cdfa781b7db2ebf.bindTooltip(
+                `<div>
+                     Tropical Cyclone YAGI-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f960c0e0141cf6d95bb7db763404cb4a = L.marker(
+                [22.1, 61.8],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_e3db1bf5ffdb9aa619832586c04d6380 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_f960c0e0141cf6d95bb7db763404cb4a.setIcon(custom_icon_e3db1bf5ffdb9aa619832586c04d6380);
+        
+    
+        var popup_8355f459dacc5f245a957b1035edba0f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c696cdcbad05df291c51dc3d3c94e26e = $(`<div id="html_c696cdcbad05df291c51dc3d3c94e26e" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone ASNA-24<br><b>Location:</b> Pakistan, India<br><b>Alert Level:</b> Orange<br><b>Date:</b> 30 Aug 2024 - 01 Sep 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001089&episodeid=11&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_8355f459dacc5f245a957b1035edba0f.setContent(html_c696cdcbad05df291c51dc3d3c94e26e);
+            
+        
+
+        marker_f960c0e0141cf6d95bb7db763404cb4a.bindPopup(popup_8355f459dacc5f245a957b1035edba0f)
+        ;
+
+        
+    
+    
+            marker_f960c0e0141cf6d95bb7db763404cb4a.bindTooltip(
+                `<div>
+                     Tropical Cyclone ASNA-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5ab6b14f9ed1dff6adcfcec52d538253 = L.marker(
+                [-21.094394544514103, -48.135084789951804],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_4449594f9bf3b0d42b99a814c1a799bb = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/WF.png"});
+        marker_5ab6b14f9ed1dff6adcfcec52d538253.setIcon(custom_icon_4449594f9bf3b0d42b99a814c1a799bb);
+        
+    
+        var popup_858dc7084b0928f6dd75f731809e3817 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c664e0cc16f0a9f7c5f960f2219c68a7 = $(`<div id="html_c664e0cc16f0a9f7c5f960f2219c68a7" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Forest fires in Brazil<br><b>Location:</b> Brazil<br><b>Alert Level:</b> Orange<br><b>Date:</b> 21 Aug 2024 - 25 Aug 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1021647&episodeid=10&eventtype=WF' target='_blank'>View Report</a></div>`)[0];
+                popup_858dc7084b0928f6dd75f731809e3817.setContent(html_c664e0cc16f0a9f7c5f960f2219c68a7);
+            
+        
+
+        marker_5ab6b14f9ed1dff6adcfcec52d538253.bindPopup(popup_858dc7084b0928f6dd75f731809e3817)
+        ;
+
+        
+    
+    
+            marker_5ab6b14f9ed1dff6adcfcec52d538253.bindTooltip(
+                `<div>
+                     Forest fires in Brazil
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_23ff12032d405052ec422fa8f8df215e = L.marker(
+                [32.728499897241804, -17.019008580499783],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_59c592ec8a784dbb32433be69b3ee400 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/WF.png"});
+        marker_23ff12032d405052ec422fa8f8df215e.setIcon(custom_icon_59c592ec8a784dbb32433be69b3ee400);
+        
+    
+        var popup_4cac6752e4f577a6cd827583711cd97c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_14edc271c9a423265e95530b9d740759 = $(`<div id="html_14edc271c9a423265e95530b9d740759" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Forest fires in Portugal<br><b>Location:</b> Portugal<br><b>Alert Level:</b> Orange<br><b>Date:</b> 14 Aug 2024 - 19 Aug 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1021445&episodeid=5&eventtype=WF' target='_blank'>View Report</a></div>`)[0];
+                popup_4cac6752e4f577a6cd827583711cd97c.setContent(html_14edc271c9a423265e95530b9d740759);
+            
+        
+
+        marker_23ff12032d405052ec422fa8f8df215e.bindPopup(popup_4cac6752e4f577a6cd827583711cd97c)
+        ;
+
+        
+    
+    
+            marker_23ff12032d405052ec422fa8f8df215e.bindTooltip(
+                `<div>
+                     Forest fires in Portugal
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d8e90ea79c680fc0afe5d93e2653c3f9 = L.marker(
+                [40.5, 155.3],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_85c448ad2ef39eb4bb28d7a85bdcc26e = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_d8e90ea79c680fc0afe5d93e2653c3f9.setIcon(custom_icon_85c448ad2ef39eb4bb28d7a85bdcc26e);
+        
+    
+        var popup_e5a688a5db4a6084bde4aa78b1435bf3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1c2d4f853c8ed6eb9049296bf1d5e801 = $(`<div id="html_1c2d4f853c8ed6eb9049296bf1d5e801" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone AMPIL-24<br><b>Location:</b> Japan<br><b>Alert Level:</b> Red<br><b>Date:</b> 12 Aug 2024 - 18 Aug 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001082&episodeid=24&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_e5a688a5db4a6084bde4aa78b1435bf3.setContent(html_1c2d4f853c8ed6eb9049296bf1d5e801);
+            
+        
+
+        marker_d8e90ea79c680fc0afe5d93e2653c3f9.bindPopup(popup_e5a688a5db4a6084bde4aa78b1435bf3)
+        ;
+
+        
+    
+    
+            marker_d8e90ea79c680fc0afe5d93e2653c3f9.bindTooltip(
+                `<div>
+                     Tropical Cyclone AMPIL-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_caaddcf79d3ff38c5e429ccae07c48f9 = L.marker(
+                [52.9242, 160.1413],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_d3f72b1582f65c32f12ae393c7aa618e = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/EQ.png"});
+        marker_caaddcf79d3ff38c5e429ccae07c48f9.setIcon(custom_icon_d3f72b1582f65c32f12ae393c7aa618e);
+        
+    
+        var popup_4f45e84eac90d5136d05c50858a8534d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f62a2c74ebcda6d0fe3902b9e4ae5498 = $(`<div id="html_f62a2c74ebcda6d0fe3902b9e4ae5498" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in Russia<br><b>Location:</b> Russia<br><b>Alert Level:</b> Orange<br><b>Date:</b> 17 Aug 2024 19:10:28<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1442254&episodeid=1588691&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_4f45e84eac90d5136d05c50858a8534d.setContent(html_f62a2c74ebcda6d0fe3902b9e4ae5498);
+            
+        
+
+        marker_caaddcf79d3ff38c5e429ccae07c48f9.bindPopup(popup_4f45e84eac90d5136d05c50858a8534d)
+        ;
+
+        
+    
+    
+            marker_caaddcf79d3ff38c5e429ccae07c48f9.bindTooltip(
+                `<div>
+                     Earthquake in Russia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c0bb40bcdc0a1f4a9280279c25ec1f42 = L.marker(
+                [38.1512473412013, 23.925977962755443],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_d24785231445a04aac323164a4300dc8 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Red/WF.png"});
+        marker_c0bb40bcdc0a1f4a9280279c25ec1f42.setIcon(custom_icon_d24785231445a04aac323164a4300dc8);
+        
+    
+        var popup_ddc15fd4c2966ff8cbccbbaacf317add = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_787296bb38eff8ae698b37557928fe65 = $(`<div id="html_787296bb38eff8ae698b37557928fe65" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Forest fires in Greece<br><b>Location:</b> Greece<br><b>Alert Level:</b> Red<br><b>Date:</b> 11 Aug 2024 - 13 Aug 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1021078&episodeid=5&eventtype=WF' target='_blank'>View Report</a></div>`)[0];
+                popup_ddc15fd4c2966ff8cbccbbaacf317add.setContent(html_787296bb38eff8ae698b37557928fe65);
+            
+        
+
+        marker_c0bb40bcdc0a1f4a9280279c25ec1f42.bindPopup(popup_ddc15fd4c2966ff8cbccbbaacf317add)
+        ;
+
+        
+    
+    
+            marker_c0bb40bcdc0a1f4a9280279c25ec1f42.bindTooltip(
+                `<div>
+                     Forest fires in Greece
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_18910684e663a0bc782ec09240a2ae6b = L.marker(
+                [39.92723486132849, 20.10526762305542],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_1f19d762d972856b79d3dca22c32144a = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/WF.png"});
+        marker_18910684e663a0bc782ec09240a2ae6b.setIcon(custom_icon_1f19d762d972856b79d3dca22c32144a);
+        
+    
+        var popup_cb6e6553f8c8b289a9defcf4a1d38bec = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bba9e5283ae87c8289ac9d492db9da2f = $(`<div id="html_bba9e5283ae87c8289ac9d492db9da2f" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Forest fires in Albania<br><b>Location:</b> Albania<br><b>Alert Level:</b> Orange<br><b>Date:</b> 11 Aug 2024 - 12 Aug 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1021196&episodeid=2&eventtype=WF' target='_blank'>View Report</a></div>`)[0];
+                popup_cb6e6553f8c8b289a9defcf4a1d38bec.setContent(html_bba9e5283ae87c8289ac9d492db9da2f);
+            
+        
+
+        marker_18910684e663a0bc782ec09240a2ae6b.bindPopup(popup_cb6e6553f8c8b289a9defcf4a1d38bec)
+        ;
+
+        
+    
+    
+            marker_18910684e663a0bc782ec09240a2ae6b.bindTooltip(
+                `<div>
+                     Forest fires in Albania
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e699ab8443bc711ee3692b4edf4fed36 = L.marker(
+                [-16.980001433791614, -59.03800113816561],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_ffa44143d153c085ed63e64794dcd7cb = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/WF.png"});
+        marker_e699ab8443bc711ee3692b4edf4fed36.setIcon(custom_icon_ffa44143d153c085ed63e64794dcd7cb);
+        
+    
+        var popup_cc07da3cf9ebb29bd277f2e0ed363309 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_842272204d4a130759eaf06d050997ed = $(`<div id="html_842272204d4a130759eaf06d050997ed" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Forest fires in Bolivia, Brazil<br><b>Location:</b> Bolivia, Brazil<br><b>Alert Level:</b> Orange<br><b>Date:</b> 01 Jul 2024 - 08 Aug 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1020946&episodeid=1&eventtype=WF' target='_blank'>View Report</a></div>`)[0];
+                popup_cc07da3cf9ebb29bd277f2e0ed363309.setContent(html_842272204d4a130759eaf06d050997ed);
+            
+        
+
+        marker_e699ab8443bc711ee3692b4edf4fed36.bindPopup(popup_cc07da3cf9ebb29bd277f2e0ed363309)
+        ;
+
+        
+    
+    
+            marker_e699ab8443bc711ee3692b4edf4fed36.bindTooltip(
+                `<div>
+                     Forest fires in Bolivia, Brazil
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_578251f50c18c5bfd2d18f0aca322bdd = L.marker(
+                [-12.631660638913054, -65.47664590843465],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_e6fa2f912a059ffb65da0f6ce29f6c4a = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/WF.png"});
+        marker_578251f50c18c5bfd2d18f0aca322bdd.setIcon(custom_icon_e6fa2f912a059ffb65da0f6ce29f6c4a);
+        
+    
+        var popup_09765a3a4f73c0caef93e021d7332a9b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_564b79f82a504fbb7e5565ffe677beba = $(`<div id="html_564b79f82a504fbb7e5565ffe677beba" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Forest fires in Bolivia<br><b>Location:</b> Bolivia<br><b>Alert Level:</b> Orange<br><b>Date:</b> 21 Jul 2024 - 07 Aug 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1020780&episodeid=1&eventtype=WF' target='_blank'>View Report</a></div>`)[0];
+                popup_09765a3a4f73c0caef93e021d7332a9b.setContent(html_564b79f82a504fbb7e5565ffe677beba);
+            
+        
+
+        marker_578251f50c18c5bfd2d18f0aca322bdd.bindPopup(popup_09765a3a4f73c0caef93e021d7332a9b)
+        ;
+
+        
+    
+    
+            marker_578251f50c18c5bfd2d18f0aca322bdd.bindTooltip(
+                `<div>
+                     Forest fires in Bolivia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a56cea9def1df7bab8d4276d853f900b = L.marker(
+                [8.7912006, 33.820323725],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_f1fe77c1de870341deb6bd9a58fbbd1e = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png"});
+        marker_a56cea9def1df7bab8d4276d853f900b.setIcon(custom_icon_f1fe77c1de870341deb6bd9a58fbbd1e);
+        
+    
+        var popup_fa7d04b3ed46fbcfdfe372b26ff55a82 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b1e08031c8fa6f2f807cfa697ffc61dd = $(`<div id="html_b1e08031c8fa6f2f807cfa697ffc61dd" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Sudan<br><b>Location:</b> Sudan<br><b>Alert Level:</b> Orange<br><b>Date:</b> 03 Aug 2024 - 05 Aug 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102815&episodeid=1&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_fa7d04b3ed46fbcfdfe372b26ff55a82.setContent(html_b1e08031c8fa6f2f807cfa697ffc61dd);
+            
+        
+
+        marker_a56cea9def1df7bab8d4276d853f900b.bindPopup(popup_fa7d04b3ed46fbcfdfe372b26ff55a82)
+        ;
+
+        
+    
+    
+            marker_a56cea9def1df7bab8d4276d853f900b.bindTooltip(
+                `<div>
+                     Flood in Sudan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ef89aa63209dfe29153fb0370142b4dc = L.marker(
+                [8.1933, 126.6],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_e83e6442d34b3a35aadbee7b9b6c71ec = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/EQ.png"});
+        marker_ef89aa63209dfe29153fb0370142b4dc.setIcon(custom_icon_e83e6442d34b3a35aadbee7b9b6c71ec);
+        
+    
+        var popup_343e180a7b76c67109cf684636911cca = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_519fd7058ffbe10d63015c5bef480aa9 = $(`<div id="html_519fd7058ffbe10d63015c5bef480aa9" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in Philippines<br><b>Location:</b> Philippines<br><b>Alert Level:</b> Orange<br><b>Date:</b> 02 Aug 2024 22:23:00<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1440170&episodeid=1585877&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_343e180a7b76c67109cf684636911cca.setContent(html_519fd7058ffbe10d63015c5bef480aa9);
+            
+        
+
+        marker_ef89aa63209dfe29153fb0370142b4dc.bindPopup(popup_343e180a7b76c67109cf684636911cca)
+        ;
+
+        
+    
+    
+            marker_ef89aa63209dfe29153fb0370142b4dc.bindTooltip(
+                `<div>
+                     Earthquake in Philippines
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bfe5abc2111d317980cc8169e625881e = L.marker(
+                [25.6, 119.4],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_f4cf048879da43d71e0b578076875079 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_bfe5abc2111d317980cc8169e625881e.setIcon(custom_icon_f4cf048879da43d71e0b578076875079);
+        
+    
+        var popup_973adfe8b541495aacfbe6d1926556af = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4f4fb2bfb00e15ed1b67400741dcfc5a = $(`<div id="html_4f4fb2bfb00e15ed1b67400741dcfc5a" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone GAEMI-24<br><b>Location:</b> Japan, Taiwan, China, Philippines<br><b>Alert Level:</b> Red<br><b>Date:</b> 19 Jul 2024 - 25 Jul 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001072&episodeid=24&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_973adfe8b541495aacfbe6d1926556af.setContent(html_4f4fb2bfb00e15ed1b67400741dcfc5a);
+            
+        
+
+        marker_bfe5abc2111d317980cc8169e625881e.bindPopup(popup_973adfe8b541495aacfbe6d1926556af)
+        ;
+
+        
+    
+    
+            marker_bfe5abc2111d317980cc8169e625881e.bindTooltip(
+                `<div>
+                     Tropical Cyclone GAEMI-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c0bad6833424649d4195cdfe1e43c6f2 = L.marker(
+                [-23.0467, -67.7818],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_ae106a1ea0c86b839b158782edfc6ac9 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/EQ.png"});
+        marker_c0bad6833424649d4195cdfe1e43c6f2.setIcon(custom_icon_ae106a1ea0c86b839b158782edfc6ac9);
+        
+    
+        var popup_9587ebaf62089d50537384aac668fe3c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_078ad4f6b6686d1ee4db593858b7287b = $(`<div id="html_078ad4f6b6686d1ee4db593858b7287b" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in Chile<br><b>Location:</b> Chile<br><b>Alert Level:</b> Orange<br><b>Date:</b> 19 Jul 2024 01:50:46<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1437973&episodeid=1583016&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_9587ebaf62089d50537384aac668fe3c.setContent(html_078ad4f6b6686d1ee4db593858b7287b);
+            
+        
+
+        marker_c0bad6833424649d4195cdfe1e43c6f2.bindPopup(popup_9587ebaf62089d50537384aac668fe3c)
+        ;
+
+        
+    
+    
+            marker_c0bad6833424649d4195cdfe1e43c6f2.bindTooltip(
+                `<div>
+                     Earthquake in Chile
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3509758b230fc587df77c55a7fd12b86 = L.marker(
+                [33.9, -93.7],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_2a4921b13e49dd98b1ff67b1820f8203 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_3509758b230fc587df77c55a7fd12b86.setIcon(custom_icon_2a4921b13e49dd98b1ff67b1820f8203);
+        
+    
+        var popup_0fb9f000e2a4d669e381b3ff4f7a64ca = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3e7025b7276d4236c13ca8654dfd3b90 = $(`<div id="html_3e7025b7276d4236c13ca8654dfd3b90" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone BERYL-24<br><b>Location:</b> Haiti, Grenada, Jamaica, Trinidad and Tobago, Saint Vincent and the Grenadines, Mexico, Belize, United States<br><b>Alert Level:</b> Red<br><b>Date:</b> 28 Jun 2024 - 09 Jul 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001067&episodeid=43&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_0fb9f000e2a4d669e381b3ff4f7a64ca.setContent(html_3e7025b7276d4236c13ca8654dfd3b90);
+            
+        
+
+        marker_3509758b230fc587df77c55a7fd12b86.bindPopup(popup_0fb9f000e2a4d669e381b3ff4f7a64ca)
+        ;
+
+        
+    
+    
+            marker_3509758b230fc587df77c55a7fd12b86.bindTooltip(
+                `<div>
+                     Tropical Cyclone BERYL-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d401d5c413b99074510d119398c01535 = L.marker(
+                [-15.8106, -74.4447],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_47b9c4d03b65f9503fcb90e0516cca72 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/EQ.png"});
+        marker_d401d5c413b99074510d119398c01535.setIcon(custom_icon_47b9c4d03b65f9503fcb90e0516cca72);
+        
+    
+        var popup_2a03cbfb5fc454105788274e3baeb1ea = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_394c0332489bf4f71d597af3ab181454 = $(`<div id="html_394c0332489bf4f71d597af3ab181454" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in Peru<br><b>Location:</b> Peru<br><b>Alert Level:</b> Orange<br><b>Date:</b> 28 Jun 2024 05:36:37<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1435013&episodeid=1579146&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_2a03cbfb5fc454105788274e3baeb1ea.setContent(html_394c0332489bf4f71d597af3ab181454);
+            
+        
+
+        marker_d401d5c413b99074510d119398c01535.bindPopup(popup_2a03cbfb5fc454105788274e3baeb1ea)
+        ;
+
+        
+    
+    
+            marker_d401d5c413b99074510d119398c01535.bindTooltip(
+                `<div>
+                     Earthquake in Peru
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a6118013a624e1ca554647144069194e = L.marker(
+                [22.3, -102.0],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_7f231f47d143c3b26b34f8af46b962ac = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_a6118013a624e1ca554647144069194e.setIcon(custom_icon_7f231f47d143c3b26b34f8af46b962ac);
+        
+    
+        var popup_307875303090ce6a70230d708b14da3b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fdd338fd4e60f930a0c13be27219c42f = $(`<div id="html_fdd338fd4e60f930a0c13be27219c42f" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone ALBERTO-24<br><b>Location:</b> Guatemala, Mexico, United States, Belize<br><b>Alert Level:</b> Orange<br><b>Date:</b> 17 Jun 2024 - 20 Jun 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001066&episodeid=13&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_307875303090ce6a70230d708b14da3b.setContent(html_fdd338fd4e60f930a0c13be27219c42f);
+            
+        
+
+        marker_a6118013a624e1ca554647144069194e.bindPopup(popup_307875303090ce6a70230d708b14da3b)
+        ;
+
+        
+    
+    
+            marker_a6118013a624e1ca554647144069194e.bindTooltip(
+                `<div>
+                     Tropical Cyclone ALBERTO-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7ab472bf1b610205e1fba76cd7b39208 = L.marker(
+                [-4.4910206, 136.5084106],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_89103eaf44d01fda3320201e945ddd63 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png"});
+        marker_7ab472bf1b610205e1fba76cd7b39208.setIcon(custom_icon_89103eaf44d01fda3320201e945ddd63);
+        
+    
+        var popup_a2300183e6cc1e8b859d436746fad9ea = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b0ed8f36724290482747b2cabfa4a5b3 = $(`<div id="html_b0ed8f36724290482747b2cabfa4a5b3" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Indonesia<br><b>Location:</b> Indonesia<br><b>Alert Level:</b> Orange<br><b>Date:</b> 03 Feb 2024 - 12 Jun 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102458&episodeid=44&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_a2300183e6cc1e8b859d436746fad9ea.setContent(html_b0ed8f36724290482747b2cabfa4a5b3);
+            
+        
+
+        marker_7ab472bf1b610205e1fba76cd7b39208.bindPopup(popup_a2300183e6cc1e8b859d436746fad9ea)
+        ;
+
+        
+    
+    
+            marker_7ab472bf1b610205e1fba76cd7b39208.bindTooltip(
+                `<div>
+                     Flood in Indonesia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f9bb88838f974928f237f7c4628e4e17 = L.marker(
+                [34.89546496536708, 32.526284092187666],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_95631c06e946fbd3658b6a5b9a98c988 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/WF.png"});
+        marker_f9bb88838f974928f237f7c4628e4e17.setIcon(custom_icon_95631c06e946fbd3658b6a5b9a98c988);
+        
+    
+        var popup_ac60e7a708909f76cb72d606738841e3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_be582f2227a14d8c5e81f1eba20bfbbb = $(`<div id="html_be582f2227a14d8c5e81f1eba20bfbbb" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Forest fires in Cyprus<br><b>Location:</b> Cyprus<br><b>Alert Level:</b> Orange<br><b>Date:</b> 11 Jun 2024 - 11 Jun 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1019828&episodeid=1&eventtype=WF' target='_blank'>View Report</a></div>`)[0];
+                popup_ac60e7a708909f76cb72d606738841e3.setContent(html_be582f2227a14d8c5e81f1eba20bfbbb);
+            
+        
+
+        marker_f9bb88838f974928f237f7c4628e4e17.bindPopup(popup_ac60e7a708909f76cb72d606738841e3)
+        ;
+
+        
+    
+    
+            marker_f9bb88838f974928f237f7c4628e4e17.bindTooltip(
+                `<div>
+                     Forest fires in Cyprus
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5ea4d78d6618733bc110a0cb60bdd0ef = L.marker(
+                [15.643765172429916, -89.44044838693911],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_39ec054878f5824888b912f7d8364731 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/WF.png"});
+        marker_5ea4d78d6618733bc110a0cb60bdd0ef.setIcon(custom_icon_39ec054878f5824888b912f7d8364731);
+        
+    
+        var popup_4bb31468fa72f7cbea83d0d2f9a90bf2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_578eb61e78ad8d76d7da8fb8c3b596f8 = $(`<div id="html_578eb61e78ad8d76d7da8fb8c3b596f8" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Forest fires in Guatemala<br><b>Location:</b> Guatemala<br><b>Alert Level:</b> Orange<br><b>Date:</b> 12 May 2024 - 28 May 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1019735&episodeid=8&eventtype=WF' target='_blank'>View Report</a></div>`)[0];
+                popup_4bb31468fa72f7cbea83d0d2f9a90bf2.setContent(html_578eb61e78ad8d76d7da8fb8c3b596f8);
+            
+        
+
+        marker_5ea4d78d6618733bc110a0cb60bdd0ef.bindPopup(popup_4bb31468fa72f7cbea83d0d2f9a90bf2)
+        ;
+
+        
+    
+    
+            marker_5ea4d78d6618733bc110a0cb60bdd0ef.bindTooltip(
+                `<div>
+                     Forest fires in Guatemala
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f84111c9a815cf695cb08343eeb1ba2a = L.marker(
+                [21.7, 88.4],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_8b1cb31499ad28d1a9fd3a7b1549bae2 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/TC.png"});
+        marker_f84111c9a815cf695cb08343eeb1ba2a.setIcon(custom_icon_8b1cb31499ad28d1a9fd3a7b1549bae2);
+        
+    
+        var popup_07d03071d627c5d85f94aa641114ee24 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_77fd09f26e46811b66b0be5fc1b8f01a = $(`<div id="html_77fd09f26e46811b66b0be5fc1b8f01a" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone REMAL-24<br><b>Location:</b> Bangladesh, India, Bhutan<br><b>Alert Level:</b> Orange<br><b>Date:</b> 25 May 2024 - 26 May 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001064&episodeid=6&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_07d03071d627c5d85f94aa641114ee24.setContent(html_77fd09f26e46811b66b0be5fc1b8f01a);
+            
+        
+
+        marker_f84111c9a815cf695cb08343eeb1ba2a.bindPopup(popup_07d03071d627c5d85f94aa641114ee24)
+        ;
+
+        
+    
+    
+            marker_f84111c9a815cf695cb08343eeb1ba2a.bindTooltip(
+                `<div>
+                     Tropical Cyclone REMAL-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b25d510e43d3c3053b1ac553eba2c079 = L.marker(
+                [35.9261784, 64.6237758],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_a6d8388f43e668e9278391638334ee59 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png"});
+        marker_b25d510e43d3c3053b1ac553eba2c079.setIcon(custom_icon_a6d8388f43e668e9278391638334ee59);
+        
+    
+        var popup_b0cf19902114a7ddda85f17f62cc5ddc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7649b1e9fbafa8e9ae6ae7f050e974d0 = $(`<div id="html_7649b1e9fbafa8e9ae6ae7f050e974d0" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Afghanistan<br><b>Location:</b> Afghanistan<br><b>Alert Level:</b> Orange<br><b>Date:</b> 09 May 2024 - 25 May 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102616&episodeid=3&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_b0cf19902114a7ddda85f17f62cc5ddc.setContent(html_7649b1e9fbafa8e9ae6ae7f050e974d0);
+            
+        
+
+        marker_b25d510e43d3c3053b1ac553eba2c079.bindPopup(popup_b0cf19902114a7ddda85f17f62cc5ddc)
+        ;
+
+        
+    
+    
+            marker_b25d510e43d3c3053b1ac553eba2c079.bindTooltip(
+                `<div>
+                     Flood in Afghanistan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_29bb3bcdbb55dbd09702b7af24727c96 = L.marker(
+                [-8.1356327, -35.8566421],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_77b5d223ca5ba539bb23c084f3717f7b = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png"});
+        marker_29bb3bcdbb55dbd09702b7af24727c96.setIcon(custom_icon_77b5d223ca5ba539bb23c084f3717f7b);
+        
+    
+        var popup_2329fa5f26daa476164474c9b3b12231 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_93c6545d9cecfa10e05312090b7925c2 = $(`<div id="html_93c6545d9cecfa10e05312090b7925c2" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Brazil<br><b>Location:</b> Brazil<br><b>Alert Level:</b> Orange<br><b>Date:</b> 23 Apr 2024 - 17 May 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102592&episodeid=7&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_2329fa5f26daa476164474c9b3b12231.setContent(html_93c6545d9cecfa10e05312090b7925c2);
+            
+        
+
+        marker_29bb3bcdbb55dbd09702b7af24727c96.bindPopup(popup_2329fa5f26daa476164474c9b3b12231)
+        ;
+
+        
+    
+    
+            marker_29bb3bcdbb55dbd09702b7af24727c96.bindTooltip(
+                `<div>
+                     Flood in Brazil
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2516021c70ded52e3b00798a10c26753 = L.marker(
+                [-1.2832533, 36.8172449],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_f98dc5c7ae80e8c48068150081a33a48 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png"});
+        marker_2516021c70ded52e3b00798a10c26753.setIcon(custom_icon_f98dc5c7ae80e8c48068150081a33a48);
+        
+    
+        var popup_fe82ce58e9bf033f18e8948cc6ece385 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ca4f3e5b00d113ca75e2646ced430ac8 = $(`<div id="html_ca4f3e5b00d113ca75e2646ced430ac8" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Kenya<br><b>Location:</b> Kenya<br><b>Alert Level:</b> Orange<br><b>Date:</b> 12 Apr 2024 - 06 May 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102604&episodeid=1&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_fe82ce58e9bf033f18e8948cc6ece385.setContent(html_ca4f3e5b00d113ca75e2646ced430ac8);
+            
+        
+
+        marker_2516021c70ded52e3b00798a10c26753.bindPopup(popup_fe82ce58e9bf033f18e8948cc6ece385)
+        ;
+
+        
+    
+    
+            marker_2516021c70ded52e3b00798a10c26753.bindTooltip(
+                `<div>
+                     Flood in Kenya
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_85eb2f1bd4ef7700776ef0e2a7f2797b = L.marker(
+                [-7.54, 39.47],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_5ca38ab271d9cf4f9debb9f2b9ccd67c = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_85eb2f1bd4ef7700776ef0e2a7f2797b.setIcon(custom_icon_5ca38ab271d9cf4f9debb9f2b9ccd67c);
+        
+    
+        var popup_fe64e15756953f4a738b3a134fbab0f9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7e55c6983f9e84f4e0fc9c9b4315c96b = $(`<div id="html_7e55c6983f9e84f4e0fc9c9b4315c96b" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone HIDAYA-24<br><b>Location:</b> Tanzania, Seychelles, Comoros<br><b>Alert Level:</b> Orange<br><b>Date:</b> 01 May 2024 - 04 May 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001060&episodeid=15&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_fe64e15756953f4a738b3a134fbab0f9.setContent(html_7e55c6983f9e84f4e0fc9c9b4315c96b);
+            
+        
+
+        marker_85eb2f1bd4ef7700776ef0e2a7f2797b.bindPopup(popup_fe64e15756953f4a738b3a134fbab0f9)
+        ;
+
+        
+    
+    
+            marker_85eb2f1bd4ef7700776ef0e2a7f2797b.bindTooltip(
+                `<div>
+                     Tropical Cyclone HIDAYA-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2eb2ca28bdeff44e17f738a94a28d950 = L.marker(
+                [-2.9666868, 29.1943658],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_0f8cf4902509501bd98328f293348428 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png"});
+        marker_2eb2ca28bdeff44e17f738a94a28d950.setIcon(custom_icon_0f8cf4902509501bd98328f293348428);
+        
+    
+        var popup_7e24d4eba27250d15ce5fb0d1114df7f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_42cba99774b26eb479f5653e9f299c86 = $(`<div id="html_42cba99774b26eb479f5653e9f299c86" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Burundi<br><b>Location:</b> Burundi<br><b>Alert Level:</b> Orange<br><b>Date:</b> 17 Mar 2024 - 03 May 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102544&episodeid=6&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_7e24d4eba27250d15ce5fb0d1114df7f.setContent(html_42cba99774b26eb479f5653e9f299c86);
+            
+        
+
+        marker_2eb2ca28bdeff44e17f738a94a28d950.bindPopup(popup_7e24d4eba27250d15ce5fb0d1114df7f)
+        ;
+
+        
+    
+    
+            marker_2eb2ca28bdeff44e17f738a94a28d950.bindTooltip(
+                `<div>
+                     Flood in Burundi
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4a58a0c2d880d24d7903abd97900181e = L.marker(
+                [8.9901969, 35.8239985],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_9d754a4621e30c6ce82b1492de15293c = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png"});
+        marker_4a58a0c2d880d24d7903abd97900181e.setIcon(custom_icon_9d754a4621e30c6ce82b1492de15293c);
+        
+    
+        var popup_75f7a5b29df6396617bac1cdbb46777a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6fa696ed12ab7d314a3896277e771e45 = $(`<div id="html_6fa696ed12ab7d314a3896277e771e45" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Ethiopia<br><b>Location:</b> Ethiopia<br><b>Alert Level:</b> Orange<br><b>Date:</b> 29 Apr 2024 - 01 May 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102637&episodeid=1&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_75f7a5b29df6396617bac1cdbb46777a.setContent(html_6fa696ed12ab7d314a3896277e771e45);
+            
+        
+
+        marker_4a58a0c2d880d24d7903abd97900181e.bindPopup(popup_75f7a5b29df6396617bac1cdbb46777a)
+        ;
+
+        
+    
+    
+            marker_4a58a0c2d880d24d7903abd97900181e.bindTooltip(
+                `<div>
+                     Flood in Ethiopia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_31663737852907c4b4093a81006a7c6a = L.marker(
+                [-6.8160837, 39.2803583],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_3666b4bb71c76cf2265676392c88eb8e = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png"});
+        marker_31663737852907c4b4093a81006a7c6a.setIcon(custom_icon_3666b4bb71c76cf2265676392c88eb8e);
+        
+    
+        var popup_628280fd6b3105279ee710d907eb2e66 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5d9b6d08d555522daed56229eca30914 = $(`<div id="html_5d9b6d08d555522daed56229eca30914" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Tanzania<br><b>Location:</b> Tanzania<br><b>Alert Level:</b> Orange<br><b>Date:</b> 28 Mar 2024 - 28 Apr 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102555&episodeid=3&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_628280fd6b3105279ee710d907eb2e66.setContent(html_5d9b6d08d555522daed56229eca30914);
+            
+        
+
+        marker_31663737852907c4b4093a81006a7c6a.bindPopup(popup_628280fd6b3105279ee710d907eb2e66)
+        ;
+
+        
+    
+    
+            marker_31663737852907c4b4093a81006a7c6a.bindTooltip(
+                `<div>
+                     Flood in Tanzania
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b8f54666dcdd7b542aac821e826a0fba = L.marker(
+                [17.11854870481462, -90.98804031054158],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_01b372c3a7e839dac7cef04086ed83dd = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Red/WF.png"});
+        marker_b8f54666dcdd7b542aac821e826a0fba.setIcon(custom_icon_01b372c3a7e839dac7cef04086ed83dd);
+        
+    
+        var popup_658a77040bb682c07cc1f05a8a9c1174 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bf889b8b94fb9dccc2872d90c70b776d = $(`<div id="html_bf889b8b94fb9dccc2872d90c70b776d" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Forest fires in Guatemala<br><b>Location:</b> Guatemala<br><b>Alert Level:</b> Red<br><b>Date:</b> 20 Apr 2024 - 28 Apr 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1019635&episodeid=2&eventtype=WF' target='_blank'>View Report</a></div>`)[0];
+                popup_658a77040bb682c07cc1f05a8a9c1174.setContent(html_bf889b8b94fb9dccc2872d90c70b776d);
+            
+        
+
+        marker_b8f54666dcdd7b542aac821e826a0fba.bindPopup(popup_658a77040bb682c07cc1f05a8a9c1174)
+        ;
+
+        
+    
+    
+            marker_b8f54666dcdd7b542aac821e826a0fba.bindTooltip(
+                `<div>
+                     Forest fires in Guatemala
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0f81b3b07f4b2ab4f5c98dda18b0f330 = L.marker(
+                [47.6605827, 50.806203],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_93350547a3f59949c643554ebe2a5854 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png"});
+        marker_0f81b3b07f4b2ab4f5c98dda18b0f330.setIcon(custom_icon_93350547a3f59949c643554ebe2a5854);
+        
+    
+        var popup_56b43d2552bb9f4a2fdf3440586e85b2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4c560fb4945ec00562702d1a66205f9b = $(`<div id="html_4c560fb4945ec00562702d1a66205f9b" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Kazakhstan<br><b>Location:</b> Kazakhstan<br><b>Alert Level:</b> Orange<br><b>Date:</b> 28 Mar 2024 - 10 Apr 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102548&episodeid=2&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_56b43d2552bb9f4a2fdf3440586e85b2.setContent(html_4c560fb4945ec00562702d1a66205f9b);
+            
+        
+
+        marker_0f81b3b07f4b2ab4f5c98dda18b0f330.bindPopup(popup_56b43d2552bb9f4a2fdf3440586e85b2)
+        ;
+
+        
+    
+    
+            marker_0f81b3b07f4b2ab4f5c98dda18b0f330.bindTooltip(
+                `<div>
+                     Flood in Kazakhstan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ba0aa11d71709d89a9ab5b811ee6e73c = L.marker(
+                [23.819, 121.5616],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_e48e599c4e009a3d47959d496438ee77 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/EQ.png"});
+        marker_ba0aa11d71709d89a9ab5b811ee6e73c.setIcon(custom_icon_e48e599c4e009a3d47959d496438ee77);
+        
+    
+        var popup_6f9d5f72b420e7837d3ddf43f28fa2ce = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0dffc142e9cccc66cc2e03a6d0b3e220 = $(`<div id="html_0dffc142e9cccc66cc2e03a6d0b3e220" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in Taiwan<br><b>Location:</b> Taiwan<br><b>Alert Level:</b> Orange<br><b>Date:</b> 02 Apr 2024 23:58:11<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1422322&episodeid=1562637&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_6f9d5f72b420e7837d3ddf43f28fa2ce.setContent(html_0dffc142e9cccc66cc2e03a6d0b3e220);
+            
+        
+
+        marker_ba0aa11d71709d89a9ab5b811ee6e73c.bindPopup(popup_6f9d5f72b420e7837d3ddf43f28fa2ce)
+        ;
+
+        
+    
+    
+            marker_ba0aa11d71709d89a9ab5b811ee6e73c.bindTooltip(
+                `<div>
+                     Earthquake in Taiwan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_90c2bbdd78083814a5c80334c57d8e27 = L.marker(
+                [-13.83, 48.09],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_05b7cd6b7b7e9c972f8ce8873ed6cfea = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_90c2bbdd78083814a5c80334c57d8e27.setIcon(custom_icon_05b7cd6b7b7e9c972f8ce8873ed6cfea);
+        
+    
+        var popup_4f87495b5d3a2de9cddf9dbd4f5f1266 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_55f5fa603c423f2c918bf034f5559fd7 = $(`<div id="html_55f5fa603c423f2c918bf034f5559fd7" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone GAMANE-24<br><b>Location:</b> Madagascar<br><b>Alert Level:</b> Orange<br><b>Date:</b> 25 Mar 2024 - 28 Mar 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001057&episodeid=11&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_4f87495b5d3a2de9cddf9dbd4f5f1266.setContent(html_55f5fa603c423f2c918bf034f5559fd7);
+            
+        
+
+        marker_90c2bbdd78083814a5c80334c57d8e27.bindPopup(popup_4f87495b5d3a2de9cddf9dbd4f5f1266)
+        ;
+
+        
+    
+    
+            marker_90c2bbdd78083814a5c80334c57d8e27.bindTooltip(
+                `<div>
+                     Tropical Cyclone GAMANE-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5f822fc49702eb244ba5c1dc03f87784 = L.marker(
+                [-4.1388, 143.1594],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_ff0d0eeb543e08f3ad30f1c35334b63d = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Red/EQ.png"});
+        marker_5f822fc49702eb244ba5c1dc03f87784.setIcon(custom_icon_ff0d0eeb543e08f3ad30f1c35334b63d);
+        
+    
+        var popup_35027cb9de66422dd7a69e31492b831b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ee2f5645f477c9352c711abcc0669bd7 = $(`<div id="html_ee2f5645f477c9352c711abcc0669bd7" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in Papua New Guinea<br><b>Location:</b> Papua New Guinea<br><b>Alert Level:</b> Red<br><b>Date:</b> 23 Mar 2024 20:22:04<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1420849&episodeid=1560728&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_35027cb9de66422dd7a69e31492b831b.setContent(html_ee2f5645f477c9352c711abcc0669bd7);
+            
+        
+
+        marker_5f822fc49702eb244ba5c1dc03f87784.bindPopup(popup_35027cb9de66422dd7a69e31492b831b)
+        ;
+
+        
+    
+    
+            marker_5f822fc49702eb244ba5c1dc03f87784.bindTooltip(
+                `<div>
+                     Earthquake in Papua New Guinea
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a3b72ec9ca1b8b9b6f02704eaff46266 = L.marker(
+                [-5.8668, 112.3622],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_cf11c13cc1a80180efed4a12c3dcb586 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/EQ.png"});
+        marker_a3b72ec9ca1b8b9b6f02704eaff46266.setIcon(custom_icon_cf11c13cc1a80180efed4a12c3dcb586);
+        
+    
+        var popup_5e5673a08d8721cee834131dda7b6843 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_36cf0231a6be66b1f82a76015b0f5944 = $(`<div id="html_36cf0231a6be66b1f82a76015b0f5944" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in Indonesia<br><b>Location:</b> Indonesia<br><b>Alert Level:</b> Orange<br><b>Date:</b> 22 Mar 2024 08:52:58<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1420595&episodeid=1560395&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_5e5673a08d8721cee834131dda7b6843.setContent(html_36cf0231a6be66b1f82a76015b0f5944);
+            
+        
+
+        marker_a3b72ec9ca1b8b9b6f02704eaff46266.bindPopup(popup_5e5673a08d8721cee834131dda7b6843)
+        ;
+
+        
+    
+    
+            marker_a3b72ec9ca1b8b9b6f02704eaff46266.bindTooltip(
+                `<div>
+                     Earthquake in Indonesia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_51d2857de29e6451ef47933d8f4cf887 = L.marker(
+                [-33.09, 41.87],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_4d32dcfa4b2208b16a9fe809c78eea7d = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_51d2857de29e6451ef47933d8f4cf887.setIcon(custom_icon_4d32dcfa4b2208b16a9fe809c78eea7d);
+        
+    
+        var popup_b41957210f10e41f206d3abbf2a3c583 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_43ab1a146d42cd84949f050e3b948ee6 = $(`<div id="html_43ab1a146d42cd84949f050e3b948ee6" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone FILIPO-24<br><b>Location:</b> Mozambique, South Africa, Eswatini, Zimbabwe, Malawi<br><b>Alert Level:</b> Orange<br><b>Date:</b> 03 Mar 2024 - 14 Mar 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001053&episodeid=20&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_b41957210f10e41f206d3abbf2a3c583.setContent(html_43ab1a146d42cd84949f050e3b948ee6);
+            
+        
+
+        marker_51d2857de29e6451ef47933d8f4cf887.bindPopup(popup_b41957210f10e41f206d3abbf2a3c583)
+        ;
+
+        
+    
+    
+            marker_51d2857de29e6451ef47933d8f4cf887.bindTooltip(
+                `<div>
+                     Tropical Cyclone FILIPO-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e82951f3fb6da42f05a403f8e6da0ab5 = L.marker(
+                [35.94369307263106, -100.94106003493793],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_a3709dfd12e094ce62e5e0735efa3dcc = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/WF.png"});
+        marker_e82951f3fb6da42f05a403f8e6da0ab5.setIcon(custom_icon_a3709dfd12e094ce62e5e0735efa3dcc);
+        
+    
+        var popup_6f157e4e1beae442cce3c14ceb94cc2c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_acaf67e32f7b304b9cf9bbc80510b6ec = $(`<div id="html_acaf67e32f7b304b9cf9bbc80510b6ec" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Forest fires in United States<br><b>Location:</b> United States<br><b>Alert Level:</b> Orange<br><b>Date:</b> 27 Feb 2024 - 28 Feb 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1019285&episodeid=2&eventtype=WF' target='_blank'>View Report</a></div>`)[0];
+                popup_6f157e4e1beae442cce3c14ceb94cc2c.setContent(html_acaf67e32f7b304b9cf9bbc80510b6ec);
+            
+        
+
+        marker_e82951f3fb6da42f05a403f8e6da0ab5.bindPopup(popup_6f157e4e1beae442cce3c14ceb94cc2c)
+        ;
+
+        
+    
+    
+            marker_e82951f3fb6da42f05a403f8e6da0ab5.bindTooltip(
+                `<div>
+                     Forest fires in United States
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c0201089ec811af1d86f589f913210ed = L.marker(
+                [8.7286, 125.7102],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_975c54a24bfa1ec40ca7f9c3a0af3653 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/EQ.png"});
+        marker_c0201089ec811af1d86f589f913210ed.setIcon(custom_icon_975c54a24bfa1ec40ca7f9c3a0af3653);
+        
+    
+        var popup_2ecef116bf6c082357241d832d3e2ba0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7f8aee62ff30770da271176a9dc84482 = $(`<div id="html_7f8aee62ff30770da271176a9dc84482" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in Philippines<br><b>Location:</b> Philippines<br><b>Alert Level:</b> Orange<br><b>Date:</b> 10 Feb 2024 05:21:30<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1414718&episodeid=1552720&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_2ecef116bf6c082357241d832d3e2ba0.setContent(html_7f8aee62ff30770da271176a9dc84482);
+            
+        
+
+        marker_c0201089ec811af1d86f589f913210ed.bindPopup(popup_2ecef116bf6c082357241d832d3e2ba0)
+        ;
+
+        
+    
+    
+            marker_c0201089ec811af1d86f589f913210ed.bindTooltip(
+                `<div>
+                     Earthquake in Philippines
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fc0cb40194bfd2577b68157eda9b9f11 = L.marker(
+                [8.6991, 125.5444],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_9af2314aa0f23e25f9aa757133be2910 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/EQ.png"});
+        marker_fc0cb40194bfd2577b68157eda9b9f11.setIcon(custom_icon_9af2314aa0f23e25f9aa757133be2910);
+        
+    
+        var popup_e2f857ecb1444733d6ce9918d015f19d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_60c0cb03de6119808b4cd48f043538d5 = $(`<div id="html_60c0cb03de6119808b4cd48f043538d5" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in Philippines<br><b>Location:</b> Philippines<br><b>Alert Level:</b> Orange<br><b>Date:</b> 10 Feb 2024 03:22:03<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1414701&episodeid=1552680&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_e2f857ecb1444733d6ce9918d015f19d.setContent(html_60c0cb03de6119808b4cd48f043538d5);
+            
+        
+
+        marker_fc0cb40194bfd2577b68157eda9b9f11.bindPopup(popup_e2f857ecb1444733d6ce9918d015f19d)
+        ;
+
+        
+    
+    
+            marker_fc0cb40194bfd2577b68157eda9b9f11.bindTooltip(
+                `<div>
+                     Earthquake in Philippines
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_48c6a9338e8e895616e131b41dadea6a = L.marker(
+                [-33.13528410918907, -71.50353595711036],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_4a80702424b84a287dbaf8fe256a58bb = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Red/WF.png"});
+        marker_48c6a9338e8e895616e131b41dadea6a.setIcon(custom_icon_4a80702424b84a287dbaf8fe256a58bb);
+        
+    
+        var popup_45e8a76c4d36c3db37d1f7f5ef765970 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f42912ff645db984758330ae2be20c6e = $(`<div id="html_f42912ff645db984758330ae2be20c6e" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Forest fires in Chile<br><b>Location:</b> Chile<br><b>Alert Level:</b> Red<br><b>Date:</b> 02 Feb 2024 - 05 Feb 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1019173&episodeid=4&eventtype=WF' target='_blank'>View Report</a></div>`)[0];
+                popup_45e8a76c4d36c3db37d1f7f5ef765970.setContent(html_f42912ff645db984758330ae2be20c6e);
+            
+        
+
+        marker_48c6a9338e8e895616e131b41dadea6a.bindPopup(popup_45e8a76c4d36c3db37d1f7f5ef765970)
+        ;
+
+        
+    
+    
+            marker_48c6a9338e8e895616e131b41dadea6a.bindTooltip(
+                `<div>
+                     Forest fires in Chile
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bde3a7915e046136166a66294e396d12 = L.marker(
+                [41.2689, 78.649],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_9282f7f3ca431e6d131fba86c5c032f2 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/EQ.png"});
+        marker_bde3a7915e046136166a66294e396d12.setIcon(custom_icon_9282f7f3ca431e6d131fba86c5c032f2);
+        
+    
+        var popup_aef98243880272c4db3f3349021e0585 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_25cc5184966effe5bfad6357f9a40c3e = $(`<div id="html_25cc5184966effe5bfad6357f9a40c3e" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in China<br><b>Location:</b> China<br><b>Alert Level:</b> Orange<br><b>Date:</b> 22 Jan 2024 18:09:04<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1411622&episodeid=1548715&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_aef98243880272c4db3f3349021e0585.setContent(html_25cc5184966effe5bfad6357f9a40c3e);
+            
+        
+
+        marker_bde3a7915e046136166a66294e396d12.bindPopup(popup_aef98243880272c4db3f3349021e0585)
+        ;
+
+        
+    
+    
+            marker_bde3a7915e046136166a66294e396d12.bindTooltip(
+                `<div>
+                     Earthquake in China
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9712caf38cf09bc95a544a3b4ebf3a20 = L.marker(
+                [-23.6, 64.48],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_340e436877e297ec6da6d44ae2b27af7 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Green/TC.png"});
+        marker_9712caf38cf09bc95a544a3b4ebf3a20.setIcon(custom_icon_340e436877e297ec6da6d44ae2b27af7);
+        
+    
+        var popup_d2822921963886babcb2339696c7fb15 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bea48d697f5b83c631e756620e40a5fb = $(`<div id="html_bea48d697f5b83c631e756620e40a5fb" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone BELAL-24<br><b>Location:</b> Miscellaneous (French) Indian Ocean Islands, Mauritius, Madagascar<br><b>Alert Level:</b> Orange<br><b>Date:</b> 12 Jan 2024 - 19 Jan 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001041&episodeid=27&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_d2822921963886babcb2339696c7fb15.setContent(html_bea48d697f5b83c631e756620e40a5fb);
+            
+        
+
+        marker_9712caf38cf09bc95a544a3b4ebf3a20.bindPopup(popup_d2822921963886babcb2339696c7fb15)
+        ;
+
+        
+    
+    
+            marker_9712caf38cf09bc95a544a3b4ebf3a20.bindTooltip(
+                `<div>
+                     Tropical Cyclone BELAL-24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3f296ab1cd7ba6298f53aba41d818ae4 = L.marker(
+                [47.2186371, -1.5541362],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_78e8795b85b0413ab11bdb20d9a9ef24 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png"});
+        marker_3f296ab1cd7ba6298f53aba41d818ae4.setIcon(custom_icon_78e8795b85b0413ab11bdb20d9a9ef24);
+        
+    
+        var popup_3f439b264e4acbf1c7efaa84c6b10508 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1e43541255dced84eb759adce802a501 = $(`<div id="html_1e43541255dced84eb759adce802a501" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in France<br><b>Location:</b> France<br><b>Alert Level:</b> Orange<br><b>Date:</b> 30 Dec 2023 - 03 Jan 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102408&episodeid=3&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_3f439b264e4acbf1c7efaa84c6b10508.setContent(html_1e43541255dced84eb759adce802a501);
+            
+        
+
+        marker_3f296ab1cd7ba6298f53aba41d818ae4.bindPopup(popup_3f439b264e4acbf1c7efaa84c6b10508)
+        ;
+
+        
+    
+    
+            marker_3f296ab1cd7ba6298f53aba41d818ae4.bindTooltip(
+                `<div>
+                     Flood in France
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_94ed3d3c75a13303f53ba501aac33492 = L.marker(
+                [52.8398531, 9.075962],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_be247392b8e9261c6eabe5529966b824 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png"});
+        marker_94ed3d3c75a13303f53ba501aac33492.setIcon(custom_icon_be247392b8e9261c6eabe5529966b824);
+        
+    
+        var popup_232c9adf518fcc017052c61191e46098 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a333d433021a539d323eb37a173f5402 = $(`<div id="html_a333d433021a539d323eb37a173f5402" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Germany<br><b>Location:</b> Germany<br><b>Alert Level:</b> Orange<br><b>Date:</b> 18 Dec 2023 - 03 Jan 2024<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102407&episodeid=1&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_232c9adf518fcc017052c61191e46098.setContent(html_a333d433021a539d323eb37a173f5402);
+            
+        
+
+        marker_94ed3d3c75a13303f53ba501aac33492.bindPopup(popup_232c9adf518fcc017052c61191e46098)
+        ;
+
+        
+    
+    
+            marker_94ed3d3c75a13303f53ba501aac33492.bindTooltip(
+                `<div>
+                     Flood in Germany
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b0227a4f0d32e904571d622f744a374d = L.marker(
+                [37.4976, 137.2416],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_cc56bd1ee73757b4034c47c13c97a1b7 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/EQ.png"});
+        marker_b0227a4f0d32e904571d622f744a374d.setIcon(custom_icon_cc56bd1ee73757b4034c47c13c97a1b7);
+        
+    
+        var popup_b3d0dbd9cd79d7fc3b060b536f06739a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ae08c8d264965647d8330fdb6f76f21b = $(`<div id="html_ae08c8d264965647d8330fdb6f76f21b" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in Japan<br><b>Location:</b> Japan<br><b>Alert Level:</b> Orange<br><b>Date:</b> 01 Jan 2024 07:10:09<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1408627&episodeid=1545354&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_b3d0dbd9cd79d7fc3b060b536f06739a.setContent(html_ae08c8d264965647d8330fdb6f76f21b);
+            
+        
+
+        marker_b0227a4f0d32e904571d622f744a374d.bindPopup(popup_b3d0dbd9cd79d7fc3b060b536f06739a)
+        ;
+
+        
+    
+    
+            marker_b0227a4f0d32e904571d622f744a374d.bindTooltip(
+                `<div>
+                     Earthquake in Japan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a1fbdb8b8e5dac5e66ef2019ac860cc4 = L.marker(
+                [35.7432, 102.8272],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_b1b086ef721b1d04f8994c8c5e19baad = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Red/EQ.png"});
+        marker_a1fbdb8b8e5dac5e66ef2019ac860cc4.setIcon(custom_icon_b1b086ef721b1d04f8994c8c5e19baad);
+        
+    
+        var popup_6947ebb4d0fbaa730aa84d4050d10435 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cefccc283b4490ad08b655e9e5958787 = $(`<div id="html_cefccc283b4490ad08b655e9e5958787" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in China<br><b>Location:</b> China<br><b>Alert Level:</b> Red<br><b>Date:</b> 18 Dec 2023 15:59:30<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1406601&episodeid=1543048&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_6947ebb4d0fbaa730aa84d4050d10435.setContent(html_cefccc283b4490ad08b655e9e5958787);
+            
+        
+
+        marker_a1fbdb8b8e5dac5e66ef2019ac860cc4.bindPopup(popup_6947ebb4d0fbaa730aa84d4050d10435)
+        ;
+
+        
+    
+    
+            marker_a1fbdb8b8e5dac5e66ef2019ac860cc4.bindTooltip(
+                `<div>
+                     Earthquake in China
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_124d37d43e9c3fe385fa9fcd7b6292ce = L.marker(
+                [7.2629844, 43.5360531],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_c2a620ef52a8271edd46c706ac8ebe6b = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png"});
+        marker_124d37d43e9c3fe385fa9fcd7b6292ce.setIcon(custom_icon_c2a620ef52a8271edd46c706ac8ebe6b);
+        
+    
+        var popup_3350ddfc02605179a983b043d1bd2ccc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_30c20116d777811e4e61918954d8db46 = $(`<div id="html_30c20116d777811e4e61918954d8db46" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Ethiopia<br><b>Location:</b> Ethiopia<br><b>Alert Level:</b> Orange<br><b>Date:</b> 01 Nov 2023 - 06 Dec 2023<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102308&episodeid=1&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_3350ddfc02605179a983b043d1bd2ccc.setContent(html_30c20116d777811e4e61918954d8db46);
+            
+        
+
+        marker_124d37d43e9c3fe385fa9fcd7b6292ce.bindPopup(popup_3350ddfc02605179a983b043d1bd2ccc)
+        ;
+
+        
+    
+    
+            marker_124d37d43e9c3fe385fa9fcd7b6292ce.bindTooltip(
+                `<div>
+                     Flood in Ethiopia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_253dbbb37e42008a276d0d3f895ea9ff = L.marker(
+                [8.3676771, 49.083416],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_7d80b447317197e02a3e7115cdcb5633 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png"});
+        marker_253dbbb37e42008a276d0d3f895ea9ff.setIcon(custom_icon_7d80b447317197e02a3e7115cdcb5633);
+        
+    
+        var popup_c95dc77ec76b8933a7c263779a3dce31 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d248dbcbde758556bafb3e38b501fe93 = $(`<div id="html_d248dbcbde758556bafb3e38b501fe93" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Somalia<br><b>Location:</b> Somalia<br><b>Alert Level:</b> Orange<br><b>Date:</b> 04 Oct 2023 - 06 Dec 2023<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102258&episodeid=1&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_c95dc77ec76b8933a7c263779a3dce31.setContent(html_d248dbcbde758556bafb3e38b501fe93);
+            
+        
+
+        marker_253dbbb37e42008a276d0d3f895ea9ff.bindPopup(popup_c95dc77ec76b8933a7c263779a3dce31)
+        ;
+
+        
+    
+    
+            marker_253dbbb37e42008a276d0d3f895ea9ff.bindTooltip(
+                `<div>
+                     Flood in Somalia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_645a33d70ad1da2bc98a29c5fce54a31 = L.marker(
+                [1.4419683, 38.4313975],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_80cb01d75b3e5394764de6c649f661e7 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png"});
+        marker_645a33d70ad1da2bc98a29c5fce54a31.setIcon(custom_icon_80cb01d75b3e5394764de6c649f661e7);
+        
+    
+        var popup_01988c89c26dc664825f21e89e2eb567 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6eda41260b1e55b06ff2df13753e190e = $(`<div id="html_6eda41260b1e55b06ff2df13753e190e" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Flood in Kenya<br><b>Location:</b> Kenya<br><b>Alert Level:</b> Orange<br><b>Date:</b> 23 Oct 2023 - 06 Dec 2023<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1102288&episodeid=1&eventtype=FL' target='_blank'>View Report</a></div>`)[0];
+                popup_01988c89c26dc664825f21e89e2eb567.setContent(html_6eda41260b1e55b06ff2df13753e190e);
+            
+        
+
+        marker_645a33d70ad1da2bc98a29c5fce54a31.bindPopup(popup_01988c89c26dc664825f21e89e2eb567)
+        ;
+
+        
+    
+    
+            marker_645a33d70ad1da2bc98a29c5fce54a31.bindTooltip(
+                `<div>
+                     Flood in Kenya
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_881459a8a45c2935ba2f06c5fc714627 = L.marker(
+                [14.3, 80.1],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_0ea42edbaf9f2d2d2eb728b3ec551faf = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/TC.png"});
+        marker_881459a8a45c2935ba2f06c5fc714627.setIcon(custom_icon_0ea42edbaf9f2d2d2eb728b3ec551faf);
+        
+    
+        var popup_5783d988cb2535c96b00412d364502c7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_74060009bc32294c4c607bb234b9675f = $(`<div id="html_74060009bc32294c4c607bb234b9675f" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone MICHAUNG-23<br><b>Location:</b> India<br><b>Alert Level:</b> Orange<br><b>Date:</b> 03 Dec 2023 - 04 Dec 2023<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001037&episodeid=8&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_5783d988cb2535c96b00412d364502c7.setContent(html_74060009bc32294c4c607bb234b9675f);
+            
+        
+
+        marker_881459a8a45c2935ba2f06c5fc714627.bindPopup(popup_5783d988cb2535c96b00412d364502c7)
+        ;
+
+        
+    
+    
+            marker_881459a8a45c2935ba2f06c5fc714627.bindTooltip(
+                `<div>
+                     Tropical Cyclone MICHAUNG-23
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_387a33e718f58eee506d8788fb726e6c = L.marker(
+                [8.5266, 126.4487],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_a60026d35df2ffffab2a98c9c76d7398 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/EQ.png"});
+        marker_387a33e718f58eee506d8788fb726e6c.setIcon(custom_icon_a60026d35df2ffffab2a98c9c76d7398);
+        
+    
+        var popup_b00f54f32a7078938f925c23e35d360b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2415c7edfef5a2ca79a268dbca303d12 = $(`<div id="html_2415c7edfef5a2ca79a268dbca303d12" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in Philippines<br><b>Location:</b> Philippines<br><b>Alert Level:</b> Orange<br><b>Date:</b> 02 Dec 2023 14:37:03<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1403417&episodeid=1539234&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_b00f54f32a7078938f925c23e35d360b.setContent(html_2415c7edfef5a2ca79a268dbca303d12);
+            
+        
+
+        marker_387a33e718f58eee506d8788fb726e6c.bindPopup(popup_b00f54f32a7078938f925c23e35d360b)
+        ;
+
+        
+    
+    
+            marker_387a33e718f58eee506d8788fb726e6c.bindTooltip(
+                `<div>
+                     Earthquake in Philippines
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5d8b130e3de850b485f59cc640e37bba = L.marker(
+                [-15.867, -65.017],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_c2217b1cae9b5fa56f589d60d0d8c5f1 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/DR.png"});
+        marker_5d8b130e3de850b485f59cc640e37bba.setIcon(custom_icon_c2217b1cae9b5fa56f589d60d0d8c5f1);
+        
+    
+        var popup_65945fc9d4db35a2d72d414f25ac9af9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b6bf4c7c6dadae4f322aa10c436f1ea1 = $(`<div id="html_b6bf4c7c6dadae4f322aa10c436f1ea1" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Drought in Bolivia, Brazil, Peru, Paraguay<br><b>Location:</b> Bolivia, Brazil, Peru, Paraguay<br><b>Alert Level:</b> Orange<br><b>Date:</b> 21 Aug 2023 - 30 Nov 2023<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1016612&episodeid=5&eventtype=DR' target='_blank'>View Report</a></div>`)[0];
+                popup_65945fc9d4db35a2d72d414f25ac9af9.setContent(html_b6bf4c7c6dadae4f322aa10c436f1ea1);
+            
+        
+
+        marker_5d8b130e3de850b485f59cc640e37bba.bindPopup(popup_65945fc9d4db35a2d72d414f25ac9af9)
+        ;
+
+        
+    
+    
+            marker_5d8b130e3de850b485f59cc640e37bba.bindTooltip(
+                `<div>
+                     Drought in Bolivia, Brazil, Peru, Paraguay
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5380453a990b6f4305c78e28890dd8f9 = L.marker(
+                [-14.775396030111564, -61.95680528526826],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_c85a427f518da8109f2ed5afd7ab61ca = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Red/WF.png"});
+        marker_5380453a990b6f4305c78e28890dd8f9.setIcon(custom_icon_c85a427f518da8109f2ed5afd7ab61ca);
+        
+    
+        var popup_7c4714ee37adeb5d134e793602aabdd2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d8cc88dafa548a6cab5e295cc7ac0629 = $(`<div id="html_d8cc88dafa548a6cab5e295cc7ac0629" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Forest fires in Bolivia<br><b>Location:</b> Bolivia<br><b>Alert Level:</b> Red<br><b>Date:</b> 05 Nov 2023 - 27 Nov 2023<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1018546&episodeid=5&eventtype=WF' target='_blank'>View Report</a></div>`)[0];
+                popup_7c4714ee37adeb5d134e793602aabdd2.setContent(html_d8cc88dafa548a6cab5e295cc7ac0629);
+            
+        
+
+        marker_5380453a990b6f4305c78e28890dd8f9.bindPopup(popup_7c4714ee37adeb5d134e793602aabdd2)
+        ;
+
+        
+    
+    
+            marker_5380453a990b6f4305c78e28890dd8f9.bindTooltip(
+                `<div>
+                     Forest fires in Bolivia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_82db4a0a754f82ec43c364c786870bcb = L.marker(
+                [23.2, 91.2],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_da3135ac9387b05e22e4d6edf890d380 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/TC.png"});
+        marker_82db4a0a754f82ec43c364c786870bcb.setIcon(custom_icon_da3135ac9387b05e22e4d6edf890d380);
+        
+    
+        var popup_42e0a16e03237ef14ec5c38b5f0e0134 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9fa85ae29fbdc5a7aeed65d81f9b4ea0 = $(`<div id="html_9fa85ae29fbdc5a7aeed65d81f9b4ea0" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Tropical Cyclone MIDHILI-23<br><b>Location:</b> India, Bangladesh<br><b>Alert Level:</b> Orange<br><b>Date:</b> 16 Nov 2023 - 17 Nov 2023<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1001034&episodeid=4&eventtype=TC' target='_blank'>View Report</a></div>`)[0];
+                popup_42e0a16e03237ef14ec5c38b5f0e0134.setContent(html_9fa85ae29fbdc5a7aeed65d81f9b4ea0);
+            
+        
+
+        marker_82db4a0a754f82ec43c364c786870bcb.bindPopup(popup_42e0a16e03237ef14ec5c38b5f0e0134)
+        ;
+
+        
+    
+    
+            marker_82db4a0a754f82ec43c364c786870bcb.bindTooltip(
+                `<div>
+                     Tropical Cyclone MIDHILI-23
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_243c902d5fbe2c714dac2d4186f9e5a4 = L.marker(
+                [5.5872, 125.051],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_75ec09532d0b87059cf9bac95d3c73f7 = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/EQ.png"});
+        marker_243c902d5fbe2c714dac2d4186f9e5a4.setIcon(custom_icon_75ec09532d0b87059cf9bac95d3c73f7);
+        
+    
+        var popup_b030813301d89e6507ccee84153bd39d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4810a01a0da91207522227160247a004 = $(`<div id="html_4810a01a0da91207522227160247a004" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in Philippines<br><b>Location:</b> Philippines<br><b>Alert Level:</b> Orange<br><b>Date:</b> 17 Nov 2023 08:14:13<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1401224&episodeid=1536682&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_b030813301d89e6507ccee84153bd39d.setContent(html_4810a01a0da91207522227160247a004);
+            
+        
+
+        marker_243c902d5fbe2c714dac2d4186f9e5a4.bindPopup(popup_b030813301d89e6507ccee84153bd39d)
+        ;
+
+        
+    
+    
+            marker_243c902d5fbe2c714dac2d4186f9e5a4.bindTooltip(
+                `<div>
+                     Earthquake in Philippines
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7545540beed7a89ecd4c4f83867851e2 = L.marker(
+                [21.226, 99.333],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_48e9d91a911d87cf6e8dc6d36efce9fe = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/EQ.png"});
+        marker_7545540beed7a89ecd4c4f83867851e2.setIcon(custom_icon_48e9d91a911d87cf6e8dc6d36efce9fe);
+        
+    
+        var popup_5e66bac3d732482875d4a98d23eac4e6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4b5da9f30a17be6d8fd9a8dc98f6d685 = $(`<div id="html_4b5da9f30a17be6d8fd9a8dc98f6d685" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in Myanmar<br><b>Location:</b> Myanmar<br><b>Alert Level:</b> Orange<br><b>Date:</b> 17 Nov 2023 01:37:10<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1401173&episodeid=1536621&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_5e66bac3d732482875d4a98d23eac4e6.setContent(html_4b5da9f30a17be6d8fd9a8dc98f6d685);
+            
+        
+
+        marker_7545540beed7a89ecd4c4f83867851e2.bindPopup(popup_5e66bac3d732482875d4a98d23eac4e6)
+        ;
+
+        
+    
+    
+            marker_7545540beed7a89ecd4c4f83867851e2.bindTooltip(
+                `<div>
+                     Earthquake in Myanmar
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_81cc8daeeb46664aceec0af30a92b2e8 = L.marker(
+                [28.8482, 82.1874],
+                {}
+            ).addTo(map_e3298bc078e1937664d9e09899a1f4fb);
+        
+    
+        var custom_icon_61b95ea10e317b9181fcb0ed0cd563ed = L.icon({"iconSize": [20, 20], "iconUrl": "https://www.gdacs.org/images/gdacs_icons/maps/Red/EQ.png"});
+        marker_81cc8daeeb46664aceec0af30a92b2e8.setIcon(custom_icon_61b95ea10e317b9181fcb0ed0cd563ed);
+        
+    
+        var popup_5e65a2830cabb0886fd53bf3d4a59923 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3e13494a09c3c2c54276c6cf5bbdc138 = $(`<div id="html_3e13494a09c3c2c54276c6cf5bbdc138" style="width: 100.0%; height: 100.0%;"><b>Event:</b> Earthquake in Nepal<br><b>Location:</b> Nepal<br><b>Alert Level:</b> Red<br><b>Date:</b> 03 Nov 2023 18:02:54<br><b>Report:</b> <a href='https://www.gdacs.org/report.aspx?eventid=1398938&episodeid=1534231&eventtype=EQ' target='_blank'>View Report</a></div>`)[0];
+                popup_5e65a2830cabb0886fd53bf3d4a59923.setContent(html_3e13494a09c3c2c54276c6cf5bbdc138);
+            
+        
+
+        marker_81cc8daeeb46664aceec0af30a92b2e8.bindPopup(popup_5e65a2830cabb0886fd53bf3d4a59923)
+        ;
+
+        
+    
+    
+            marker_81cc8daeeb46664aceec0af30a92b2e8.bindTooltip(
+                `<div>
+                     Earthquake in Nepal
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
